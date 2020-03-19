@@ -1,0 +1,25 @@
+---
+layout: page
+title: Categories
+---
+
+<div>
+  {%- assign item_list = site.categories | sort -%}
+  {%- for item in item_list -%}
+    <a href="#{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</a>
+    {%- if forloop.last == false -%}
+    &nbsp;::&nbsp;
+    {%- endif -%}
+{%- endfor -%}
+</div>
+
+<div>
+  {%- for item in item_list -%}
+  <h2 id="{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</h2>
+  <ul>
+    {%- for post in item[1] -%}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+  {%- endfor -%}
+</div>

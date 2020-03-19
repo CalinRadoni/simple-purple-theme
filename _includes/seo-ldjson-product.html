@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ include.name }}",
+  {% if include.image %}"image": [ "{{ include.image }}" ],{%- endif -%}
+  "description": "{{ include.description }}",
+  {% if include.mpn %}"mpn": "{{ include.mpn }}",{%- endif -%}
+  {% if include.sku %}"sku": "{{ include.sku }}",{%- endif -%}
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ include.brand }}"
+  },
+  "url": "{{ include.url }}"
+}
+</script>

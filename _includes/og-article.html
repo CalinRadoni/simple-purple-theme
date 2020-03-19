@@ -1,0 +1,27 @@
+
+{%- if page.image -%}
+  {%- assign xImage = page.image -%}
+{%- else -%}
+  {%- assign xImage = "/assets/img/default-article.png" -%}
+{%- endif -%}
+
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+<meta property="og:type"  content="article" />
+<meta property="og:image" content="{{ xImage | absolute_url }}" />
+<meta property="og:url"   content="{{ page.url | absolute_url }}" />
+
+{% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
+<meta property="og:site_name" content="{{ site.title }}" />
+
+{% if page.date %}<meta property="article:published_time" content="{{ page.date }}" />{% endif %}
+{% if page.date-modified %}<meta property="article:modified_time" content="{{ page.date-modified | date: %F}}" />{% endif %}
+
+{%- assign item_list = page.tags | sort -%}
+{% for item in item_list %}
+<meta property="article:tag" content="{{ item }}" />
+{%- endfor -%}
+
+{% comment %}The author is added as a person in this page{% endcomment %}
+<meta property="article:author" content="{{ page.url }}" />
+<meta property="og:type" content="profile" />
+<meta property="profile:username" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author-name }}{% endif %}" />

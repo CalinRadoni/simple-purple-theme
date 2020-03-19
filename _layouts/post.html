@@ -1,5 +1,19 @@
 ---
-layout: default
+layout: article
 ---
+
+<h1 class="post-title">{{ page.title | escape }}</h1>
+<p>
+<b>Posted on {{ page.date | date: "%F" }}{% if page.date-modified %}, updated on {{ page.date-modified | date: "%F" }}{% endif %}</b><br/>
+{%- assign item_list = page.tags | sort -%}
+{% if item_list.size > 0 %}
+Tags:&nbsp;
+{%- for item in item_list -%}
+  [<a href="{% link _pages/tags.md %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>]
+  {%- if forloop.last == false -%}&nbsp;{%- endif -%}
+{%- endfor -%}
+{% endif %}
+</p>
+<hr/>
 
 {{ content }}
