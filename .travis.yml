@@ -1,0 +1,15 @@
+os: linux
+dist: xenial
+language: ruby
+rvm:
+  - 2.5
+
+before_install:
+  - yes | gem update --system --force --no-document
+  - gem install bundler --no-document
+
+script: script/cibuild.sh
+
+branches:
+  only:
+    - master
