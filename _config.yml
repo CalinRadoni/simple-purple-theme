@@ -1,0 +1,54 @@
+# ------------------------------------------------------------------------------
+# Site settings
+# ------------------------------------------------------------------------------
+
+title: "simple-purple-theme"
+tagline: "simple-purple-theme for GitHub pages"
+description: "This theme was built for https://calinradoni.github.io/"
+logo: /assets/img/site-logo.png
+url: "https://calinradoni.github.io/"
+
+# ------------------------------------------------------------------------------
+# Theme settings
+# ------------------------------------------------------------------------------
+
+author-name: "Calin Radoni"
+author-email: CalinRadoni@users.noreply.github.com
+copyright-text: "2020"
+
+# set the date format to ISO8601. See https://shopify.github.io/liquid/filters/date/ for other formats
+date-format: "%F"
+
+skin: light
+
+social-links:
+  - site: GitHub
+    link: https://github.com/CalinRadoni
+  - site: LinkedIn
+    link: https://www.linkedin.com/in/...
+
+# ------------------------------------------------------------------------------
+# Jekyll settings
+# ------------------------------------------------------------------------------
+
+markdown: kramdown
+
+# change the permalink format
+permalink: /pages/:short_year:month:day-:slug:output_ext
+
+# exclusions ...
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# ... and inclusions
+include:
+  - _pages
+
+# required plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
