@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "simple-purple-theme"
-  spec.version       = "0.2.4"
+  spec.version       = "0.2.5"
   spec.authors       = ["Calin Radoni"]
   spec.email         = ["CalinRadoni@users.noreply.github.com"]
 
@@ -20,6 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
 
-  # bundler version defined by 'jekyll new-theme'
-  spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_development_dependency "bundler", "~> 2.1"
 end
