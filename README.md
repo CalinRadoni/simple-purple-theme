@@ -1,13 +1,12 @@
 # simple-purple-theme
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+This theme was created for [calinradoni.github.io](https://calinradoni.github.io/)
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
+This theme is setup just like a normal Jekyll site! To test it, run `bundle exec jekyll serve` and open your browser at [http://localhost:4000](http://localhost:4000). This starts a Jekyll server using this theme.
 
 ## Installation
+
+### As a gem
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -29,24 +28,62 @@ Or install it yourself as:
 
     $ gem install simple-purple-theme
 
+### As a remote theme
+
+Having a content like this for the `Gemfile`:
+
+```ruby
+source "https://rubygems.org"
+gem 'github-pages', group: :jekyll_plugins
+```
+
+add this entry:
+
+```yaml
+remote_theme: "CalinRadoni/simple-purple-theme"
+```
+
+to the `_config.yml` file.
+
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Usage documentation, including the available layouts, includes, sass and assets is *work-in-progress*.
 
 ## Development
 
-To set up your environment to develop this theme, run `bundle install`.
+To set up your environment to develop this theme, run
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+```ruby
+bundle config --local set path 'vendor/bundle'
+bundle install
+```
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `simple-purple-theme.gemspec` accordingly.
+When the theme is released, only the files tracked with Git from:
+
+* `_includes`
+* `_layouts`
+* `_pages`
+* `_posts`
+* `_sass`
+* `assets`
+
+directories and these files from root directory:
+
+* `LICENSE.txt`
+* `README.md`
+* `index.html`
+
+will be bundled. This list be changed by editing the regexp in `simple-purple-theme.gemspec` accordingly.
+
+## Contributing
+
+As much as I want to adopt the [Contributor Covenant](http://contributor-covenant.org) code of conduct, I am afraid that my spare time may be a real stopper sometime.
+
+You can [submit an issue](https://github.com/CalinRadoni/simple-purple-theme/issues/new) or make a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+For pull requests please follow [GitHub flow](https://guides.github.com/introduction/flow/).
+
+Contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-

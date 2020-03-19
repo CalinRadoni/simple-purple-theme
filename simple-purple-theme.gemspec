@@ -2,18 +2,24 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "simple-purple-theme"
-  spec.version       = "0.1.0"
+  spec.version       = "0.2.0"
   spec.authors       = ["Calin Radoni"]
   spec.email         = ["CalinRadoni@users.noreply.github.com"]
 
-  spec.summary       = "TODO: Write a short summary, because Rubygems requires one."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "This theme was created for https://calinradoni.github.io/"
+  spec.homepage      = "https://github.com/CalinRadoni/simple-purple-theme"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
+  spec.files = `git ls-files -z`.split("\x0").select do |f|
+    f.match(%r!^(assets|_(includes|layouts|pages|posts|sass)/|(LICENSE|README|index)((\.(txt|md|html)|$)))!i)
+  end
 
+  # version are taken from https://pages.github.com/versions/
+  # and were valid for github-pages version 204
   spec.add_runtime_dependency "jekyll", "~> 3.8"
+  spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
+  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
 
+  # bundler version defined by 'jekyll new-theme'
   spec.add_development_dependency "bundler", "~> 1.16"
-  spec.add_development_dependency "rake", "~> 12.0"
 end
