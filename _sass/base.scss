@@ -5,3 +5,81 @@ $font-family-code:   "Roboto Mono",monospace !default;
 $main-font-size:     16px !default;
 $main-font-weight:   400 !default;
 $main-line-height:   1.25 !default;
+
+$spacing-unit:       16px !default;
+
+$header-height:      100px !default;
+
+$page-content-width: 1024px !default;
+
+/* --- */
+
+$width-tablet: 768px;
+$width-desktop: 1024px;
+
+@mixin media-tablet {
+  @media (min-width: #{$width-tablet}) and (max-width: #{$width-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-tablet-plus {
+  @media (min-width: #{$width-tablet}) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: #{$width-desktop}) {
+    @content;
+  }
+}
+
+/* --- */
+
+* { box-sizing: border-box }
+
+html {
+  font-family: $font-family-body;
+  font-size: $main-font-size;
+  font-weight: $main-font-weight;
+  line-height: $main-line-height;
+  padding: 0;
+}
+
+body {
+  margin: 0; padding: 0;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, ol, ul {
+  margin: 0 0 $spacing-unit 0;
+  padding: 0;
+}
+
+ul, ol { margin-left: $spacing-unit }
+li { margin-bottom: 0 }
+
+a {
+  font-weight: bolder;
+  text-decoration: none;
+
+  color: $link-color;
+  &:hover { border-bottom: 2px dotted $link-color }
+}
+
+.no-wrap { white-space: nowrap }
+
+// layouts
+@import '_home';
+@import '_header';
+@import '_page';
+@import '_footer';
+
+// aux
+
+@import '_tags';
+
+// syntax highlighting
+@import '_highlight'

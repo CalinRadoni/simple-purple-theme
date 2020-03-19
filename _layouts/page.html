@@ -2,5 +2,10 @@
 layout: default
 ---
 
-<h1 class="page-title">{{ page.title | escape }}</h1>
+{% include page-header.html %}
+
+<div class="page-container">
+<article class="page">
 {{ content }}
+</article>
+</div>
