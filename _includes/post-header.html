@@ -3,8 +3,8 @@
     {% if page.title %}
       <h1>{{ page.title | escape }}</h1>
     {% endif %}
+    <h4>Posted on {{ page.date | date: "%F" }}{% if page.date-modified %}, updated on {{ page.date-modified | date: "%F" }}{% endif %}</h4>
     <div class="tag-container">
-      <b>Posted on {{ page.date | date: "%F" }}{% if page.date-modified %}, updated on {{ page.date-modified | date: "%F" }}{% endif %}</b><br/>
       {% if page.tags %}
       {% for item in page.tags %}
       <a href="{% link _pages/tags.md %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
