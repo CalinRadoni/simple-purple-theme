@@ -1,20 +1,68 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>{{ page.title | escape }}</h1>
+<head>
+{% include head.html %}
+{% include og-basic.html %}
+</head>
 
+  <body>
+    <div class="home">
+    <div class="home-column home-light home-w-limited">
+      <div class="home-data home-no-flex home-align-center">
+        <h1>{{ page.title }}</h1>
+      </div>
+
+      <div class="home-data home-flex home-align-right">
+      <h2>Documentation</h2>
+      <p><a href="{% link _pages/skins.md %}">Skins</a></p>
+      <h2>About</h2>
+      <p><a href="{% link _pages/about.md %}">About</a></p>
+      </div>
+
+      <div class="home-data home-no-flex home-align-center">
+        <p>@&nbsp;
+          {%- if site.copyright-text -%}
+            {{ site.copyright-text }}
+          {%- endif -%}
+          &nbsp;<span class="no-wrap">
+          {%- if page.author -%}
+            {{ page.author }}
+          {%- else -%}
+            {%- if site.author-email -%}
+              <a href="mailto:{{ site.author-email }}">{{ site.author-name }}</a>
+            {%- else -%}
+              {{ site.author-name }}
+            {%- endif -%}
+          {%- endif -%}
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="home-column home-dark home-w-max">
+      <div class="home-data home-flex">
 {{ content }}
-
-<h2>Posts</h2>
-<ul>
-  {%- assign date-format = site.date-format | default: "%F" -%}
-  {%- assign item_list = site.posts | sort | reverse -%}
-  {%- for post in item_list limit:10 -%}
-    <li>
-      <a href="{{ post.url }}">{{ post.title | escape}}</a>
-      {{ post.date | date: date-format }}<br/>
-      {{ post.excerpt }}
-    </li>
-  {%- endfor -%}
-</ul>
+      </div>
+      <div class="home-data home-flex">
+        <ul>
+          {%- assign date-format = site.date-format | default: "%F" -%}
+          {%- for post in site.posts limit:10 -%}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+              {{ post.date | date: date-format }}<br/>
+              {{ post.excerpt }}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      <div class="home-data home-no-flex">
+        <div class="tag-container">
+          <a class="" href="{% link _pages/categories.md %}">Categories</a>
+          <a href="{% link _pages/tags.md %}">Tags</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
