@@ -1,4 +1,3 @@
-
 {%- if page.image -%}
   {%- assign xImage = page.image -%}
 {%- else -%}
@@ -9,7 +8,14 @@
 <meta property="og:type"  content="website" />
 <meta property="og:image" content="{{ xImage | absolute_url }}" />
 <meta property="og:url"   content="{{ page.url | absolute_url }}" />
-
-{% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
+{{ }}
+{%- if page.name == "index.html" -%}
+  <meta property="og:description" content="{{ site.description }}" />
+{%- else -%}
+{%- if page.description -%}
+  <meta property="og:description" content="{{ page.description }}" />
+{%- endif -%}
+{%- endif -%}
+{{ }}
 <meta property="og:site_name" content="{{ site.title }}" />
 

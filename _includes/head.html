@@ -4,18 +4,19 @@
 
 <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-{% if page.author %}
-  {%- assign xAuthor = page.author -%}
-{%- else -%}
-  {%- assign xAuthor = site.author-name -%}
-{%- endif -%}
-{%- if page.description -%}
-  {%- assign xDescription = page.description -%}
-{%- else -%}
-  {%- assign xDescription = site.description -%}
-{%- endif -%}
-
-{% if xAuthor %}<meta name="author" content="{{ xAuthor }}" />{% endif %}
-{% if xDescription %}<meta name="description" content="{{ xDescription }}" />{% endif %}
 <link rel="canonical" href="{{ page.url | absolute_url }}" />
+{{ }}
+{%- if page.author -%}
+  <meta name="author" content="{{ page.author }}" />
+{%- else -%}
+  <meta name="author" content="{{ site.author-name }}" />
+{%- endif -%}
+{{ }}
+{{ }}
+{%- if page.name == "index.html" -%}
+  <meta name="description" content="{{ site.description }}" />
+{%- else -%}
+{%- if page.description -%}
+  <meta name="description" content="{{ page.description }}" />
+{%- endif -%}
+{%- endif -%}
