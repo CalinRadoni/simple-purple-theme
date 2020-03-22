@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% include head.html %}
+{% include og-basic.html %}
+</head>
+
+  <body>
+    <div class="home">
+    <div class="home-column home-light home-w-limited">
+      <div class="home-data home-no-flex home-align-center">
+        <h1>{{ site.title }}</h1>
+      </div>
+
+      <div class="home-data home-flex home-align-right">
+        {% include sidebar.html section="doc-links" %}
+      </div>
+
+      <div class="home-data home-no-flex home-align-center">
+        <p>@&nbsp;
+          {%- if site.copyright-text -%}
+            {{ site.copyright-text }}
+          {%- endif -%}
+          &nbsp;<span class="no-wrap">
+          {%- if page.author -%}
+            {{ page.author }}
+          {%- else -%}
+            {%- if site.author-email -%}
+              <a href="mailto:{{ site.author-email }}">{{ site.author-name }}</a>
+            {%- else -%}
+              {{ site.author-name }}
+            {%- endif -%}
+          {%- endif -%}
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="home-column home-dark home-w-max">
+      <div class="page-container">
+        <article class="page">
+        {{ content }}
+        </article>
+      </div>
+    </div>
+
+    </div><!-- div class="home"-->
+  </body>
+</html>
