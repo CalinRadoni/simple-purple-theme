@@ -7,17 +7,17 @@
 </head>
 
   <body>
-    <div class="home">
-    <div class="home-column home-light home-w-limited">
-      <div class="home-data home-no-flex home-align-center">
+    <div class="page">
+    <div class="page-column page-light page-w-limited">
+      <div class="page-data page-no-flex page-align-center">
         <h1>{{ site.title }}</h1>
       </div>
 
-      <div class="home-data home-flex home-align-right">
+      <div class="page-data page-flex page-align-right">
         {% include sidebar.html section="doc-links" %}
       </div>
 
-      <div class="home-data home-no-flex home-align-left">
+      <div class="page-data page-no-flex page-align-left">
         <p>@&nbsp;
           {%- if site.copyright-text -%}
             {{ site.copyright-text }}
@@ -38,14 +38,14 @@
       </div>
     </div>
 
-    <div class="home-column home-dark home-w-max">
+    <div class="page-column page-dark page-w-max">
       <div class="page-container">
-        <article class="page">
+        <article class="page-content">
         {{ content }}
         </article>
       </div>
     </div>
 
-    </div><!-- div class="home"-->
+    </div><!-- div class="page"-->
   </body>
 </html>
