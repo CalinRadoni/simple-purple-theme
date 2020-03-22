@@ -2,7 +2,7 @@
 # Site settings
 # ------------------------------------------------------------------------------
 
-title: "simple-purple-theme"
+title: "simple purple theme"
 tagline: "simple-purple-theme for GitHub pages"
 description: "This theme was built for https://calinradoni.github.io/"
 logo: /assets/img/site-logo.png
@@ -33,9 +33,6 @@ social-links:
 
 markdown: kramdown
 
-# change the permalink format
-permalink: /pages/:short_year:month:day-:slug:output_ext
-
 # exclusions ...
 exclude:
   - Gemfile
@@ -47,6 +44,32 @@ exclude:
 # ... and inclusions
 include:
   - _pages
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /pages/:short_year:month:day-:slug:output_ext
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: page
+      permalink: /pages/:slug:output_ext
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: doc
 
 # required plugins
 plugins:

@@ -1,0 +1,23 @@
+# sidebar content for home page
+home-links:
+  - title: "About"
+    items:
+      - name: "About"
+        url: /pages/about
+
+# sidebar content for docs
+doc-links:
+  - title: "Getting Started"
+    items:
+      - name: "Quick-start"
+        url: /docs/quick-start
+      - name: "Installation"
+        url: /docs/installation
+      - name: "Upgrade"
+        url: /docs/upgrade
+  - title: "Configuration"
+    items:
+      - name: "Setting"
+        url: /docs/settings
+      - name: "Override theme defaults"
+        url: /docs/overriding-defaults

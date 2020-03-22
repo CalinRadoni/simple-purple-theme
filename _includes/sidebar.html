@@ -1,0 +1,11 @@
+{%- assign nav-section = site.data.navigation[include.section] -%}
+{% for nav in nav-section %}
+  <h2>{{ nav.title }}</h2>
+  {% if nav.items %}
+  <ul>
+    {% for item in nav.items %}
+      <li><a href="{{ item.url }}"{% if item.url == page.url %} class="active-link"{% endif %}>{{ item.name }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endfor %}
