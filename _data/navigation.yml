@@ -9,12 +9,10 @@ home-links:
 doc-links:
   - title: "Getting Started"
     items:
-      - name: "Quick-start"
+      - name: "Quick Start"
         url: /docs/quick-start
-      - name: "Installation"
-        url: /docs/installation
-      - name: "Upgrade"
-        url: /docs/upgrade
+      - name: "Skins"
+        url: /docs/skins
   - title: "Configuration"
     items:
       - name: "Setting"

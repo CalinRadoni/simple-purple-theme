@@ -2,10 +2,12 @@
 {% for nav in nav-section %}
   <h2>{{ nav.title }}</h2>
   {% if nav.items %}
-  <ul>
     {% for item in nav.items %}
-      <li><a href="{{ item.url }}"{% if item.url == page.url %} class="active-link"{% endif %}>{{ item.name }}</a></li>
+      {%- if item.text -%}
+      <p>{{ item.text }}</p>
+      {%- else -%}
+      <p><a href="{{ item.url }}"{% if item.url == page.url %} class="active-link"{% endif %}>{{ item.name }}</a></p>
+      {%- endif -%}
     {% endfor %}
-  </ul>
   {% endif %}
 {% endfor %}

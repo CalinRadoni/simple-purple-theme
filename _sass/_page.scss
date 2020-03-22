@@ -5,3 +5,11 @@
   padding: 0 $spacing-unit;
   max-width: calc(#{$page-content-width} - 2 * #{$spacing-unit});
 }
+
+article.page {
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre { margin-bottom: 1em }
+}
+
+article.post {
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre { margin-bottom: 1em }
+}
