@@ -10,14 +10,12 @@
     <div class="home">
     <div class="home-column home-light home-w-limited">
       <div class="home-data home-no-flex home-align-center">
-        <h1>{{ page.title }}</h1>
+        <h1>{{ site.title }}</h1>
       </div>
 
       <div class="home-data home-flex home-align-right">
-      <h2>Documentation</h2>
-      <p><a href="{% link _pages/skins.md %}">Skins</a></p>
-      <h2>About</h2>
-      <p><a href="{% link _pages/about.md %}">About</a></p>
+        {% include sidebar.html section="doc-links" %}
+        {% include sidebar.html section="home-links" %}
       </div>
 
       <div class="home-data home-no-flex home-align-center">
