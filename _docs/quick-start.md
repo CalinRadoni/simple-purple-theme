@@ -51,5 +51,5 @@ bundle install
 
 **Warning:** Only one theme can be selected in the site's `_config.yml` file !
 
-To test the site locally execute `bundle exec jekyll server`
+To test the site locally execute `bundle exec jekyll serve`
 To update the theme execute `bundle update`

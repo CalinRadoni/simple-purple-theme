@@ -21,7 +21,7 @@
 
       {%- for item in site.social-links -%}
         {%- if forloop.first == true -%}&nbsp;-&nbsp;{%- else -%}&nbsp;{%- endif -%}
-        <a rel="author" href="{{ item.link | cgi_escape | escape }}">{{ item.site | escape }}</a>
+        <a rel="author" href="{{ item.link | uri_escape }}">{{ item.site | escape }}</a>
       {%- endfor -%}
     </p>
     <p>
@@ -31,6 +31,6 @@
   </div>
   <div class="page-footer-right">
     <p>Generated using <a href="https://jekyllrb.com/">Jekyll</a></p>
-    <p>Hosted by <a href="http://pages.github.com/">GitHub Pages</a></p>
+    <p>Hosted by <a href="https://pages.github.com/">GitHub Pages</a></p>
   </div>
 </footer>

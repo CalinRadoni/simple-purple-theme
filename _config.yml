@@ -64,7 +64,7 @@ defaults:
       type: pages
     values:
       layout: page
-      permalink: /pages/:slug:output_ext
+      permalink: /pages/:basename
   - scope:
       path: ""
       type: docs
