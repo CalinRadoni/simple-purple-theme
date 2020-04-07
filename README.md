@@ -62,6 +62,7 @@ bundle install
 
 When the theme is released, only the files tracked with Git from:
 
+* `_data`
 * `_includes`
 * `_layouts`
 * `_pages`
