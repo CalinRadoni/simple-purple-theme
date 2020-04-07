@@ -1,9 +1,11 @@
 # sidebar content for home page
 home-links:
-  - title: "About"
-    items:
-      - name: "About"
-        url: /pages/about
+  - name: "Quick Start"
+    url: /docs/quick-start
+  - name: "About"
+    url: /pages/about
+  - name: "GitHub"
+    url: https://github.com/CalinRadoni/simple-purple-theme
 
 # sidebar content for docs
 doc-links:
@@ -19,3 +21,11 @@ doc-links:
         url: /docs/settings
       - name: "Override theme defaults"
         url: /docs/overriding-defaults
+  - title: "Notes"
+    items:
+      - name: "About"
+        url: /docs/about
+      - name: "Credits"
+        url: /docs/credits
+      - name: "License"
+        url: /docs/license

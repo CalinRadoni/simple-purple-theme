@@ -2,46 +2,49 @@
 
 $font-family-body:   -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Helvetica,Arial,sans-serif !default;
 $font-family-code:   "Roboto Mono",monospace !default;
-$main-font-size:     16px !default;
 $main-font-weight:   400 !default;
-$main-line-height:   1.25 !default;
+$main-line-height:   1.5 !default;
 
 $spacing-unit:       16px !default;
 
 $header-height:      100px !default;
 
-$page-content-width: 1024px !default;
+$page-body-width:    992px;
+$page-sidebar-minw:  200px;
+$page-sidebar-maxw:  400px;
 
 /* --- */
 
-$width-tablet: 768px;
-$width-desktop: 1024px;
-
-@mixin media-tablet {
-  @media (min-width: #{$width-tablet}) and (max-width: #{$width-desktop - 1px}) {
-    @content;
-  }
-}
-
-@mixin media-tablet-plus {
-  @media (min-width: #{$width-tablet}) {
-    @content;
-  }
-}
-
-@mixin media-desktop {
-  @media (min-width: #{$width-desktop}) {
-    @content;
-  }
+@function strip-unit($val) {
+  @return $val / ($val - $val + 1);
 }
 
 /* --- */
+
+$media-w-small:  576px;
+$media-w-medium: 768px;
+$media-w-large:  992px;
+$media-w-extra:  1200px;
+
+@mixin viewport-min-SM { @media (min-width: $media-w-small)  { @content; } }
+@mixin viewport-min-M  { @media (min-width: $media-w-medium) { @content; } }
+@mixin viewport-min-L  { @media (min-width: $media-w-large)  { @content; } }
+@mixin viewport-min-XL { @media (min-width: $media-w-extra)  { @content; } }
+
+/* --- */
+
+$font-size-small: 16px;
+$font-size-extra: 18px;
 
 * { box-sizing: border-box }
 
 html {
   font-family: $font-family-body;
-  font-size: $main-font-size;
+  font-size: $font-size-small;
+  @include viewport-min-SM {
+    font-size: calc(#{$font-size-small} + #{strip-unit($font-size-extra - $font-size-small)} * (100vw - #{$media-w-small}) / #{strip-unit($media-w-extra - $media-w-small)});
+  }
+  @include viewport-min-XL { font-size: $font-size-extra }
   font-weight: $main-font-weight;
   line-height: $main-line-height;
   padding: 0;
@@ -51,35 +54,113 @@ body {
   margin: 0; padding: 0;
   min-height: 100vh;
   display: flex; flex-direction: column;
+  background-color: $color-back;
+  color: $color-on-back;
 }
 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, ol, ul {
-  margin: 0 0 $spacing-unit 0;
-  padding: 0;
+  margin: 0; padding: 0;
+  line-height: $main-line-height;
 }
 
 ul, ol { margin-left: $spacing-unit }
 li { margin-bottom: 0 }
 
 a {
-  font-weight: bolder;
   text-decoration: none;
-
   color: $link-color;
-  &:hover { border-bottom: 2px dotted $link-color }
+  //&:hover { border-bottom: 2px dotted $link-color }
+}
+
+section {
+  margin-bottom: 1rem;
+  max-width: $media-w-extra;
 }
 
 .no-wrap { white-space: nowrap }
 
+.site-header {
+  background-color: $color-back;
+  color: $color-on-back;
+
+  display: flex; flex-direction: row; flex-wrap: wrap; align-items: stretch; justify-content: space-between;
+
+  nav {
+    margin: auto 2rem auto auto;
+    flex: 0 1 auto;
+    ul { list-style-type: none; margin: 0; padding: 0 }
+    li {
+      float: left;
+      margin-right: 1px;
+    }
+    li:last-child { margin-right: 0 }
+    a {
+      padding: 0.5em;
+      font-size: 1rem;
+      &:hover { background-color: $color-back-2 }
+    }
+    a.active-link { font-weight: bolder }
+  }
+}
+a.logo {
+  margin: auto 2rem; padding: 0;
+  flex: 0 0 auto;
+}
+
+.row-limited, .row-full {
+  display: flex; flex-direction: column; align-items: stretch; justify-content: center;
+  @include viewport-min-M { flex-direction: row; flex-wrap: nowrap; }
+  padding: 0 1rem;
+  width: 100%;
+}
+.row-limited {
+  max-width: $media-w-extra;
+  margin: 0 auto;
+}
+.row-full {
+  min-width: 100%;
+  margin: 1rem 0;
+ }
+
+.svg-icon {
+  position: relative; top: .125em; // Place the icon on the text baseline.
+  flex-shrink: 0;                  // Prevent the icon from shrinking inside a flex container.
+  width: 1em; height: 1em;         // Scale the icon to match the font-size of the parent element.
+  fill: currentColor;              // Let the icon take whatever color the parent has.
+}
+
 // layouts
 @import '_home';
-@import '_header';
 @import '_page';
 @import '_footer';
 
 // aux
 
 @import '_tags';
+@import '_cards.scss';
+@import '_buttons.scss';
 
 // syntax highlighting
-@import '_highlight'
+@import '_highlight';
+
+// these are moved here to give them higher precedence then the ones above
+
+.text-left   { text-align: left   }
+.text-center { text-align: center }
+.text-right  { text-align: right  }
+
+.back-grad-3 {
+  background-image: linear-gradient($color-back, $color-back-3);
+}
+.color-back-1 { background-color: $color-back-1 }
+.color-back-2 { background-color: $color-back-2 }
+.color-back-3 { background-color: $color-back-3 }
+
+.color-back-red    { background-color: $color-back-red }
+.color-back-yellow { background-color: $color-back-yellow }
+.color-back-green  { background-color: $color-back-green }
+.color-back-blue   { background-color: $color-back-blue }
+
+.border-color-back-1 { border-color: $color-back-1 }
+.border-color-back-2 { border-color: $color-back-2 }
+.border-color-back-3 { border-color: $color-back-3 }

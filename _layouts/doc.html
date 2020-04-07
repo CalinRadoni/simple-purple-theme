@@ -1,51 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-{% include head.html %}
-{% include og-basic.html %}
-</head>
+<header class="site-header">
+  {% include site-header-menu.html section="home-links" %}
+</header>
 
-  <body>
-    <div class="page">
-    <div class="page-column page-light page-w-limited">
-      <div class="page-data page-no-flex page-align-center">
-        <a href="{% link index.html %}"><h1>{{ site.title }}</h1></a>
-      </div>
+<div class="page">
 
-      <div class="page-data page-flex page-align-right">
-        {% include sidebar.html section="doc-links" %}
-      </div>
+<div class="page-column page-sidebar back-grad-3">
+  {% include sidebar.html section="doc-links" %}
+</div>
 
-      <div class="page-data page-no-flex page-align-left">
-        <p>@&nbsp;
-          {%- if site.copyright-text -%}
-            {{ site.copyright-text }}
-          {%- endif -%}
-          &nbsp;<span class="no-wrap">
-          {%- if page.author -%}
-            {{ page.author }}
-          {%- else -%}
-            {%- if site.author-email -%}
-              <a href="mailto:{{ site.author-email }}">{{ site.author-name }}</a>
-            {%- else -%}
-              {{ site.author-name }}
-            {%- endif -%}
-          {%- endif -%}
-          </span>
-        </p>
-        <p>The theme is available as open source under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
-      </div>
-    </div>
+<div class="page-column">
+  <article class="page-body">
+    {{ content }}
+  </article>
+  {% include page-info.html %}
+</div>
 
-    <div class="page-column page-dark page-w-max">
-      <div class="page-container">
-        <article class="page-content">
-        {{ content }}
-        </article>
-      </div>
-    </div>
+</div><!-- div class="page"-->
 
-    </div><!-- div class="page"-->
-  </body>
-</html>
+{% include footer.html style="color-back-3" %}

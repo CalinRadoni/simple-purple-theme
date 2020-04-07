@@ -1,0 +1,11 @@
+<a class="logo" href="/">
+  <img class="logo" src="{{site.logo}}" alt="Site logo">
+</a>
+<nav>
+  <ul>
+{%- assign nav-section = site.data.navigation[include.section] -%}
+{% for nav in nav-section %}
+    <li><a href="{{ nav.url }}"{% if nav.url == page.url %} class="active-link"{% endif %}>{{ nav.name }}</a></li>
+{% endfor %}
+  <ul>
+</nav>

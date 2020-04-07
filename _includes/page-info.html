@@ -1,0 +1,33 @@
+<section class="page-info">
+  {% if page.tags.size > 0 %}
+  <p class="page-info-row">
+  <span>Tags:</span>
+  {% for item in page.tags %}
+  <a href="{% link _pages/tags.md %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
+  {% endfor %}
+  </p>
+  {% endif %}
+
+  {% if page.categories.size > 0 %}
+  <p class="page-info-row">
+  <span>Categories:</span>
+  {% for item in page.categories %}
+  <a href="{% link _pages/categories.md %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
+  {% endfor %}
+  </p>
+  {% endif %}
+
+  {% if page.author %}
+  <p class="page-info-row"><span>Author:</span> {{ page.author }}</p>
+  {% endif %}
+
+  <p class="page-info-row">
+    {%- if page.date-modified -%}
+      <span>Updated</span> {{ page.date-modified }}
+    {%- else -%}
+      {%- if page.date -%}
+      <span>Created</span> {{ page.date }}
+      {%- endif -%}
+    {%- endif -%}
+  </p>
+</section>

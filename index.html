@@ -1,14 +1,135 @@
 ---
 layout: home
+#image: /assets/img/Hero-home-1920x360.png
 ---
 
-<h1>{{ site.tagline }}</h1>
-<h3>{{ site.description }}</h3>
-<br/>
-<p>Theme features:</p>
-<ul>
-<li>it is purple (actually: Classic Blue, Living Coral, Ultra Violet, Greenery, ...)</li>
-<li>SEO for Google Search</li>
-<li>Open Graph metadata</li>
-</ul>
+<section class="home-hero back-grad-3">
+  <div class="home-hero-text">
+    <h1>{{ site.title }}</h1>
+    <h2>{{ site.description }}</h2>
+    <nav>
+      <ul>
+        <li><a class="button-main" href="{% link _docs/quick-start.md %}">Documentation</a></li>
+      </ul>
+    </nav>
+  </div>
+  <img class="home-hero-image" src="/assets/img/Hero-home-600x400.png">
+</section>
 
+<section class="row-limited">
+  <div class="card">
+    <div class="card-title"><img class="card-title-img" src="/assets/img/list.svg"></div>
+    <div class="card-body">
+      <p>Responsive</p>
+      <p>Fluid typography</p>
+      <p>SEO for Google Search</p>
+      <p>Open Graph metadata</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title"><img class="card-title-img" src="/assets/img/colors.svg"></div>
+    <div class="card-body">
+      <p class="card-row">
+        <span class="card-box-1" style="background-color: #a300a3">&nbsp;</span>
+        <span class="card-box-1" style="background-color: #800080">&nbsp;</span>
+        Purples
+      </p>
+      <p class="card-row"><span class="card-box-2" style="background-color: #0f4c81">&nbsp;</span>Classic Blue</p>
+      <p class="card-row"><span class="card-box-2" style="background-color: #FF6F61">&nbsp;</span>Living Coral</p>
+      <p class="card-row"><span class="card-box-2" style="background-color: #88B04B">&nbsp;</span>Greenery</p>
+    </div>
+  </div>
+  <div class="card text-center">
+    <div class="card-title"><img class="card-title-img" src="/assets/img/play.svg"></div>
+    <div class="card-body">
+      <p>This theme was built for <a href="https://calinradoni.github.io/">calinradoni.github.io</a></p>
+      <p>See it there in action.</p>
+    </div>
+  </div>
+</section>
+
+<section class="row-full color-back-1 text-center" style="padding: 2rem 1rem;">
+  <div class="card">
+  <h2>Examples of cards</h2>
+  <h3>(this section should be updated)</h3>
+  </div>
+</section>
+
+<section class="row-limited">
+  <div class="card card-2">
+    <div class="card-body">
+      <p>flex: 2 2 2px;</p>
+      <p>background-color: transparent</p>
+    </div>
+  </div>
+  <div class="card color-back-1">
+    <div class="card-body">
+      <p>flex: 1 1 1px;</p>
+      <p>background-color: $color-back-1</p>
+    </div>
+  </div>
+</section>
+
+<section class="row-limited">
+  <div class="card">
+    <div class="card-body">
+      <p>flex: 1 1 1px;</p>
+      <p>background-color: transparent</p>
+    </div>
+  </div>
+  <div class="card color-back-1 card-3">
+    <div class="card-body">
+      <p>flex: 3 3 3px;</p>
+      <p>background-color: $color-back-1</p>
+    </div>
+  </div>
+</section>
+
+<section class="row-limited">
+  <div class="card">
+    <div class="card-body">
+      <p>flex: 1 1 1px;</p>
+      <p>transparent</p>
+    </div>
+  </div>
+  <div class="card card-2 color-back-1">
+    <div class="card-body">
+      <p>flex: 2 2 2px;</p>
+      <p>color-back-1</p>
+    </div>
+  </div>
+  <div class="card card-3 color-back-2">
+    <div class="card-body">
+      <p>flex: 3 3 3px;</p>
+      <p>color-back-2</p>
+    </div>
+  </div>
+  <div class="card card-1 color-back-blue">
+    <div class="card-body">
+      <p>flex: 1 1 1px;</p>
+      <p>color-back-blue</p>
+    </div>
+  </div>
+</section>
+
+<section class="row-full color-back-1 text-center" style="padding: 2rem 1rem;">
+  <div class="card">
+  <h2>Single-column layout for pages and posts</h2>
+  <h2>Two-column for docs</h2>
+  <h3>~ use the layouts as needed ~</h3>
+  </div>
+</section>
+
+<section class="row-limited">
+  <div class="card">
+    <h2>Pages</h2>
+    <p>page 1</p>
+    <p>page 2</p>
+  </div>
+  <div class="card">
+    <h2>Posts</h2>
+    <p>post 17</p>
+    <p>post 16</p>
+    <p>post 15</p>
+  </div>
+</section>

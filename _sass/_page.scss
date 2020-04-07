@@ -1,59 +1,95 @@
 @charset "utf-8";
 
-.page-container {
-  margin: 0 auto;
-  padding: 0 $spacing-unit;
-  max-width: calc(#{$page-content-width} - 2 * #{$spacing-unit});
-}
-
-article.page-content {
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre { margin-bottom: 1em }
-}
-
 .page {
-  $max-width-px: 400px;
-
   flex: 1 1 auto;
   display: flex; flex-direction: column; align-items: stretch;
-  @include media-tablet-plus  { flex-direction: row }
+  @include viewport-min-M  { flex-direction: row }
 
   p, h1, h2, h3 { margin: 0 0 0.3rem 0 }
 
   a { font-weight: inherit; text-decoration: none }
 
+  &-hero {
+    position: relative;
+    width: 100%; min-width: 100%;
+    min-height: 6rem;
+
+    h1 { font-size: 2rem;   font-weight: bold }
+    h2 { font-size: 1.2rem; font-weight: normal }
+
+    &-text {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-info {
+    margin: 0 auto 1rem auto; padding: 1rem 1rem 0 1rem;
+    width: 100%; max-width: $page-body-width;
+    border-top: 1px solid $color-back-1;
+
+    &-row {
+      margin-bottom: 0.3rem;
+      &:last-child { margin-bottom: 0 }
+    }
+
+    nav {
+      padding: 0; margin: 0;
+      ul { list-style-type: none; margin: 0; padding: 0 }
+      li {
+        float: left;
+        margin-right: 1px;
+      }
+      li:last-child { margin-right: 0 }
+      a {
+        padding: 0.5em;
+        font-size: 1rem;
+        &:hover { background-color: $color-back-2 }
+      }
+    }
+  }
+
+  &-body {
+    margin: 0 auto; padding: 1rem 1rem 0 1rem;
+    width: 100%; max-width: $page-body-width;
+
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, ol, ul { margin: 0 0 1rem 0 }
+  }
+
+  &-sidebar {
+    width: 100%;
+    padding: 1rem;
+    // background-color: $color-back-3;
+    @include viewport-min-M {
+      padding-left: 1rem;
+      min-width: $page-sidebar-minw;
+      max-width: $page-sidebar-maxw;
+    }
+  }
+
+  &-side-title {
+    text-align: left;
+    font-weight: bolder;
+    padding: 0 2px;
+    @include viewport-min-M  { text-align: right }
+
+    margin-top: 1em !important;
+    &:first-child { margin-top: 0 !important }
+  }
+
+  &-side-text {
+    text-align: left; display: inline-block; margin-right: 0.3em !important;
+    &:before { content: "\2022"; margin-right: 0.3em; }
+    @include viewport-min-M  {
+      text-align: right; display: block; margin-right: 0 !important;
+      &:before { content: ""; margin-right: 0 }
+    }
+  }
+
   &-column {
-    display: flex; flex-direction: column;
-    padding: $spacing-unit calc(2 * #{$spacing-unit});
+    /* */
   }
-
-  &-w-limited, &-w-max, &-w-half { width: 100% }
-  @include media-tablet-plus {
-    &-w-limited { max-width: $max-width-px }
-    &-w-half { width: 50% }
-  }
-
-  &-light {
-    color: $color-on-back; background-color: $color-back;
-    a {
-      color: $link-color;
-      &:hover { border-bottom: 2px dotted $link-color; }
-    }
-  }
-  &-dark {
-    color: $color-on-surface;  background-color: $color-surface;
-    a {
-      color: $link-color-surface;
-      &:hover { border-bottom: 2px dotted $link-color-surface; }
-    }
-  }
-
-  &-align-center { text-align: center }
-  &-align-right  { text-align: right }
-
-  &-no-flex { flex: 0; margin: 0 }
-  &-flex { flex: 0 1 auto; margin: auto 0;}
-  &-data { padding-bottom: $spacing-unit }
-
-  &-border-top    { border-top:    solid 1px $color-surface }
-  &-border-bottom { border-bottom: solid 1px $color-surface }
 }

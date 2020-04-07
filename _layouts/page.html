@@ -2,10 +2,20 @@
 layout: default
 ---
 
-{% include page-header.html %}
+<header class="site-header">
+  {% include site-header-menu.html section="home-links" %}
+</header>
 
-<div class="page-container">
-<article class="page">
+<section class="page-hero back-grad-3">
+  <div class="page-hero-text text-center">
+    <h1>{{ page.title | escape }}</h1>
+  </div>
+</section>
+
+<article class="page-body">
 {{ content }}
 </article>
-</div>
+
+{% include page-info.html %}
+
+{% include footer.html style="color-back-1" %}

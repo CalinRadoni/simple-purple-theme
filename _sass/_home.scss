@@ -1,49 +1,47 @@
 @charset "utf-8";
 
 .home {
-  $max-width-px: 400px;
-
-  flex: 1 1 auto;
-  display: flex; flex-direction: column; align-items: stretch;
-  @include media-tablet-plus  { flex-direction: row }
-
-  p, h1, h2, h3 { margin: 0 0 0.3rem 0 }
-
   a { font-weight: inherit; text-decoration: none }
 
-  &-column {
-    display: flex; flex-direction: column;
-    padding: $spacing-unit calc(2 * #{$spacing-unit});
-  }
+  $home-hero-height: 400px;
 
-  &-w-limited, &-w-max, &-w-half { width: 100% }
-  @include media-tablet-plus {
-    &-w-limited { max-width: $max-width-px }
-    &-w-half { width: 50% }
-  }
+  &-hero {
+    position: relative;
+    width: 100%; min-width: 100%;
+    height: $home-hero-height;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-  &-light {
-    color: $color-on-back; background-color: $color-back;
-    a {
-      color: $link-color;
-      &:hover { border-bottom: 2px dotted $link-color; }
+    h1, h2 { margin: 0 0 1rem 0; padding: 0 }
+    h1 { font-size: 2rem;   font-weight: bold }
+    h2 { font-size: 1.2rem; font-weight: normal }
+
+    nav {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      ul { list-style-type: none; margin: 0; padding: 0 }
+      li {
+        float: left;
+        margin-left: 1rem;
+      }
+      li:first-child { margin-left: 0 }
+    }
+
+    &-text {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      max-width: 70%;
+    }
+
+    .home-hero-image {
+      position: absolute;
+      right: 0; bottom: 0;
+      height: $home-hero-height;
+      z-index: 1;
     }
   }
-  &-dark {
-    color: $color-on-surface;  background-color: $color-surface;
-    a {
-      color: $link-color-surface;
-      &:hover { border-bottom: 2px dotted $link-color-surface; }
-    }
-  }
-
-  &-align-center { text-align: center }
-  &-align-right  { text-align: right }
-
-  &-no-flex { flex: 0; margin: 0 }
-  &-flex { flex: 0 1 auto; margin: auto 0;}
-  &-data { padding-bottom: $spacing-unit }
-
-  &-border-top    { border-top:    solid 1px $color-surface }
-  &-border-bottom { border-bottom: solid 1px $color-surface }
 }

@@ -1,4 +1,8 @@
 ---
+categories: [ "Documentation" ]
+tags: [ "quick start", "installation" ]
+date: 2020-03-25
+date-modified: 2020-04-07
 ---
 
 # Quick Start

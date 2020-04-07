@@ -2,10 +2,9 @@
 # Site settings
 # ------------------------------------------------------------------------------
 
-title: "simple purple theme"
-tagline: "simple-purple-theme for GitHub pages"
-description: "This theme was built for https://calinradoni.github.io/"
-logo: /assets/img/site-logo.png
+title: "simple-purple-theme"
+description: "Responsive, Fluid typography, SEO for Google Search, Jekyll theme for GitHub Pages"
+logo: /assets/img/logo.svg
 url: "https://calinradoni.github.io/"
 
 # ------------------------------------------------------------------------------
@@ -19,7 +18,7 @@ copyright-text: "2020"
 # set the date format to ISO8601. See https://shopify.github.io/liquid/filters/date/ for other formats
 date-format: "%F"
 
-skin: light
+skin: purple
 
 social-links:
   - site: GitHub
