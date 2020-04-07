@@ -9,11 +9,15 @@
   display: flex; flex-direction: row; align-items: center; justify-content: flex-start;
   @include viewport-min-M { flex-direction: column }
 
-  margin: 1rem 0 0 0;
-  &:first-child { margin-top: 0 }
-  @include viewport-min-M {
-    margin: 0 0 0 1rem;
-    &:first-child { margin-left: 0 }
+  margin: 0;
+
+  &-margin {
+    margin: 1rem 0 0 0;
+    &:first-child { margin-top: 0 }
+    @include viewport-min-M {
+      margin: 0 0 0 1rem;
+      &:first-child { margin-left: 0 }
+    }
   }
 
   padding: 1rem;
@@ -23,7 +27,12 @@
 
   &-title {
     flex: 0 1 auto;
-    text-align: center;
+    text-align: right;
+    margin-right: 0.5rem;
+    @include viewport-min-M {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
   }
   &-body {
     flex: 1 1 auto;

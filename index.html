@@ -50,65 +50,63 @@ layout: home
 
 <section class="row-full color-back-1 text-center" style="padding: 2rem 1rem;">
   <div class="card">
-  <h2>Examples of cards</h2>
-  <h3>(this section should be updated)</h3>
+    <div class="card-title">
+      <h2>Here are some examples of cards</h2>
+    </div>
+    <div class="card-body text-left">
+      <p>The <code>card-body</code> is centered in the card and takes as much space as it needs, without overflowing.</p>
+      <p>For card aligned content add the <code>stretched</code> class and one of <code>text-</code> classes.</p>
+      <p>See the source of this page for more info.</p>
+    </div>
   </div>
 </section>
 
 <section class="row-limited">
-  <div class="card card-2">
-    <div class="card-body">
-      <p>flex: 2 2 2px;</p>
-      <p>background-color: transparent</p>
+  <div class="card card-2 border-color-back-2">
+    <div class="card-title">Title A</div>
+    <div class="card-body stretched text-right">
+      <p>flex 2, transparent with border, stretched, aligned right</p>
     </div>
   </div>
-  <div class="card color-back-1">
+  <div class="card color-back-1 border-color-back-2">
+    <div class="card-title">Title B</div>
+    <div class="card-body stretched text-left">
+      <p>flex 1, color-back-1 with border, stretched, aligned left</p>
+    </div>
+  </div>
+</section>
+
+<section class="row-limited">
+  <div class="card card-margin color-back-1 border-color-back-2">
     <div class="card-body">
-      <p>flex: 1 1 1px;</p>
-      <p>background-color: $color-back-1</p>
+      <p>flex 1, color-back-1 with border and margin</p>
+    </div>
+  </div>
+  <div class="card card-margin border-color-back-2 card-3">
+    <div class="card-body">
+      <p>flex 3,transparent with border and margin</p>
     </div>
   </div>
 </section>
 
 <section class="row-limited">
   <div class="card">
-    <div class="card-body">
-      <p>flex: 1 1 1px;</p>
-      <p>background-color: transparent</p>
-    </div>
+    <div class="card-body"><p>flex 1, transparent</p></div>
   </div>
-  <div class="card color-back-1 card-3">
-    <div class="card-body">
-      <p>flex: 3 3 3px;</p>
-      <p>background-color: $color-back-1</p>
-    </div>
+  <div class="card card-2 color-back-3">
+    <div class="card-body"><p>flex 2, color-back-3</p></div>
   </div>
-</section>
-
-<section class="row-limited">
-  <div class="card">
-    <div class="card-body">
-      <p>flex: 1 1 1px;</p>
-      <p>transparent</p>
-    </div>
+  <div class="card color-back-red">
+    <div class="card-body"><p>flex 1, red</p></div>
   </div>
-  <div class="card card-2 color-back-1">
-    <div class="card-body">
-      <p>flex: 2 2 2px;</p>
-      <p>color-back-1</p>
-    </div>
+  <div class="card color-back-yellow">
+    <div class="card-body"><p>flex 1, yellow</p></div>
   </div>
-  <div class="card card-3 color-back-2">
-    <div class="card-body">
-      <p>flex: 3 3 3px;</p>
-      <p>color-back-2</p>
-    </div>
+  <div class="card color-back-blue">
+    <div class="card-body"><p>flex 1, blue</p></div>
   </div>
-  <div class="card card-1 color-back-blue">
-    <div class="card-body">
-      <p>flex: 1 1 1px;</p>
-      <p>color-back-blue</p>
-    </div>
+  <div class="card color-back-green">
+    <div class="card-body"><p>flex 1, green</p></div>
   </div>
 </section>
 

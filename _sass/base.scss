@@ -145,6 +145,7 @@ a.logo {
 
 // these are moved here to give them higher precedence then the ones above
 
+.stretched   { align-self: stretch }
 .text-left   { text-align: left   }
 .text-center { text-align: center }
 .text-right  { text-align: right  }
