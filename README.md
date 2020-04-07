@@ -1,10 +1,12 @@
 # simple-purple-theme
 
+[![Build Status](https://travis-ci.com/CalinRadoni/simple-purple-theme.svg?branch=master)](https://travis-ci.com/CalinRadoni/simple-purple-theme)
+
 This theme was created for [calinradoni.github.io](https://calinradoni.github.io/)
 
 This theme is setup just like a normal Jekyll site! To test it, run `bundle exec jekyll serve` and open your browser at [http://localhost:4000](http://localhost:4000). This starts a Jekyll server using this theme.
 
-## Installation
+## Installation - NOT YET, this is work-in-progress
 
 ### As a gem
 
