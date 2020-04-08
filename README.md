@@ -65,10 +65,10 @@ When the theme is released, only the files tracked with Git from:
 * `_data`
 * `_includes`
 * `_layouts`
-* `_pages`
 * `_posts`
 * `_sass`
 * `assets`
+* `pages`
 
 directories and these files from root directory:
 
