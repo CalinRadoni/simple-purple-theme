@@ -42,7 +42,7 @@ exclude:
 
 # ... and inclusions
 include:
-  - _pages
+  - pages
 
 # Collections
 collections:
@@ -59,7 +59,7 @@ defaults:
       layout: post
       permalink: /pages/:short_year:month:day-:slug:output_ext
   - scope:
-      path: "_pages"
+      path: "pages"
       type: pages
     values:
       layout: page
@@ -74,3 +74,8 @@ defaults:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+
+# setting for jekyll-paginate
+# jekyll-paginate will produce pagination from /pages/index.html page
+paginate: 5
+paginate_path: "/pages/page:num"

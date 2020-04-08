@@ -3,7 +3,7 @@
   <p class="page-info-row">
   <span>Tags:</span>
   {% for item in page.tags %}
-  <a href="{% link _pages/tags.md %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
+  <a href="{% link pages/tags.md %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
   {% endfor %}
   </p>
   {% endif %}
@@ -12,7 +12,7 @@
   <p class="page-info-row">
   <span>Categories:</span>
   {% for item in page.categories %}
-  <a href="{% link _pages/categories.md %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
+  <a href="{% link pages/categories.md %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
   {% endfor %}
   </p>
   {% endif %}

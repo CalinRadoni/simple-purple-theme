@@ -2,6 +2,8 @@
 home-links:
   - name: "Quick Start"
     url: /docs/quick-start
+  - name: "Posts"
+    url: /pages/index
   - name: "About"
     url: /pages/about
   - name: "GitHub"

@@ -112,22 +112,41 @@ layout: home
 
 <section class="row-full color-back-1 text-center" style="padding: 2rem 1rem;">
   <div class="card">
-  <h2>Single-column layout for pages and posts</h2>
-  <h2>Two-column for docs</h2>
-  <h3>~ use the layouts as needed ~</h3>
+    <div class="card-body stretched text-center">
+      <h2>Single-column layout for pages and posts</h2>
+      <h2>Two-column for docs</h2>
+      <h3>~ use the layouts as needed ~</h3>
+    </div>
   </div>
 </section>
 
 <section class="row-limited">
   <div class="card">
+    <div class="card-body">
     <h2>Pages</h2>
-    <p>page 1</p>
-    <p>page 2</p>
+    <nav>
+      <ul>
+        <li><a href="{% link pages/about.md %}">About</a></li>
+        <li><a href="{% link pages/categories.md %}">Categories</a></li>
+        <li><a href="{% link pages/tags.md %}">Tags</a></li>
+      </ul>
+    </nav>
+    </div>
   </div>
   <div class="card">
-    <h2>Posts</h2>
-    <p>post 17</p>
-    <p>post 16</p>
-    <p>post 15</p>
+    <div class="card-body stretched text-left">
+    <a href="{% link pages/index.html %}"><h2>Posts</h2></a>
+    <p> These are the newest posts:</p>
+    <nav>
+      <ul>
+        {%- for post in site.posts limit:5 -%}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            {{ post.excerpt | strip_html }}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+    </div>
   </div>
 </section>
