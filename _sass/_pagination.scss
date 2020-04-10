@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.pagination {
+
+  &-post {
+    margin-left: 1rem;
+
+    h1 { font-size: 1.2rem; font-weight: bold }
+
+    &-body {
+      /* */
+    }
+  }
+
+  &-page-cnt { font-weight: bolder }
+}
