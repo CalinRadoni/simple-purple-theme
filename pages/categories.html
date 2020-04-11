@@ -2,27 +2,32 @@
 title: Categories
 ---
 
-<section class="row-limited">
-
-<div>
-  {%- assign item_list = site.categories | sort -%}
-  {%- for item in item_list -%}
-    <a href="#{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</a>
-    {%- if forloop.last == false -%}
-    &nbsp;::&nbsp;
-    {%- endif -%}
+<section class="row-limited-simple">
+<ul class="tag-cloud">
+{%- assign item_list = site.categories | sort -%}
+{%- for item in item_list -%}
+<li><a href="#{{ item[0] | slugify: 'ascii' }}">{{ item[0] }} ({{item[1].size}})</a></li>
 {%- endfor -%}
-</div>
+</ul>
+</section>
 
-<div>
-  {%- for item in item_list -%}
-  <h2 id="{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</h2>
-  <ul>
-    {%- for post in item[1] -%}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {%- endfor -%}
-  </ul>
+<section class="row-limited-simple">
+
+{%- for item in item_list -%}
+<div class="tag-group">
+<p class="tag-group-title">
+  <img class="svg-icon" src="/assets/img/page.svg" alt="Category">
+  <span id="{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</h3>
+</p>
+<ul class="tag-group-list">
+  {%- for post in item[1] -%}
+  <li>
+  <a href="{{ post.url }}">{{ post.title }}</a>
+  {%- if post.description -%}<br/>{{ post.description }}{%- endif -%}
+  </li>
   {%- endfor -%}
+</ul>
 </div>
+{%- endfor -%}
 
 </section>

@@ -121,6 +121,11 @@ a.logo {
   min-width: 100%;
   margin: 1rem 0;
  }
+ .row-limited-simple {
+  padding: 0 1rem;
+  max-width: $media-w-extra;
+  width: 100%;
+ }
 
 .svg-icon {
   position: relative; top: .125em; // Place the icon on the text baseline.

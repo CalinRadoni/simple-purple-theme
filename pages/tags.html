@@ -2,27 +2,32 @@
 title: Tags
 ---
 
-<section class="row-limited">
+<section class="row-limited-simple">
+<ul class="tag-cloud">
+{%- assign item_list = site.tags | sort -%}
+{%- for item in item_list -%}
+<li><a href="#{{ item[0] | slugify: 'ascii' }}">{{ item[0] }} ({{item[1].size}})</a></li>
+{%- endfor -%}
+</ul>
+</section>
 
-<div>
-  {%- assign item_list = site.tags | sort -%}
-  {%- for item in item_list -%}
-    <a href="#{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</a>
-    {%- if forloop.last == false -%}
-    &nbsp;::&nbsp;
-    {%- endif -%}
-  {%- endfor -%}
-</div>
+<section class="row-limited-simple">
 
-<div>
-  {%- for item in item_list -%}
-  <h3 id="{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</h3>
-  <ul>
-    {%- for post in item[1] -%}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {%- endfor -%}
-  </ul>
+{%- for item in item_list -%}
+<div class="tag-group">
+<p class="tag-group-title">
+  <img class="svg-icon" src="/assets/img/tags.svg" alt="Tag">
+  <span id="{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</h3>
+</p>
+<ul class="tag-group-list">
+  {%- for post in item[1] -%}
+  <li>
+  <a href="{{ post.url }}">{{ post.title }}</a>
+  {%- if post.description -%}<br/>{{ post.description }}{%- endif -%}
+  </li>
   {%- endfor -%}
+</ul>
 </div>
+{%- endfor -%}
 
 </section>
