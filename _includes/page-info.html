@@ -10,7 +10,7 @@
       {%- if page.date -%}
       <span>Created</span> {{ page.date }}
       {%- else -%}
-      <span>Updated</span> {{ site.time }}
+      <span>Updated</span> {{ site.time | date: site.date-format }}
       {%- endif -%}
     {%- endif -%}
   </p>
