@@ -23,6 +23,12 @@ doc-links:
         url: /docs/settings
       - name: "Override theme defaults"
         url: /docs/overriding-defaults
+  - title: "Posts and pages"
+    items:
+      - name: "Pages"
+        url: /docs/pages
+      - name: "Posts"
+        url: /docs/posts
   - title: "Notes"
     items:
       - name: "About"
