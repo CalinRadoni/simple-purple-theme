@@ -8,9 +8,14 @@ permalink:
 <div class="pagination-post">
   <p class="pagination-post-title"><a href="{{ post.url }}">{{ post.title }}</a></p>
   <div>
-    {{ post.content | split:'<!--preview-->' | first }}
-    {% if post.content contains '<!--preview-->' %}
-    <a href="{{ post.url }}">Read it</a>
+    {% if post.description %}
+      {{ post.description }}
+    {% else %}
+      {% if post.content contains '<!--more-->' %}
+        {{ post.content | split:'<!--more-->' | first | markdownify | strip_html }}
+      {% else %}
+        {{ post.content | markdownify | strip_html | truncatewords: 30 }}
+      {% endif %}
     {% endif %}
   </div>
 </div>

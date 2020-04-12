@@ -3,7 +3,10 @@
 .pagination-post {
   margin-bottom: 1rem;
 
-  &-title { font-size: 1.2rem; font-weight: bold }
+  &-title {
+    font-size: 1.2rem; font-weight: bold;
+    margin-bottom: 0.5rem !important;
+  }
 }
 
 .pagination-page-cnt { font-weight: bolder }
