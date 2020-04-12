@@ -2,9 +2,7 @@
 title: About
 description: About simple-purple-theme
 date: 2020-03-19
-date-modified: 2020-04-06
-categories: [ "Theme" ]
-tags: [ "About" ]
+date-modified: 2020-04-12
 ---
 
 Here follows a simple [Lorem Ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) text.
