@@ -1,16 +1,9 @@
 @charset "utf-8";
 
-.pagination {
+.pagination-post {
+  margin-bottom: 1rem;
 
-  &-post {
-    margin-left: 1rem;
-
-    h1 { font-size: 1.2rem; font-weight: bold }
-
-    &-body {
-      /* */
-    }
-  }
-
-  &-page-cnt { font-weight: bolder }
+  &-title { font-size: 1.2rem; font-weight: bold }
 }
+
+.pagination-page-cnt { font-weight: bolder }

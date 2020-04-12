@@ -4,17 +4,14 @@ title: Posts
 permalink:
 ---
 
-<section class="row-limited">
-<div class="pagination">
-
 {% for post in paginator.posts %}
 <div class="pagination-post">
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <div class="pagination-post-body">
+  <p class="pagination-post-title"><a href="{{ post.url }}">{{ post.title }}</a></p>
+  <div>
     {{ post.content | split:'<!--preview-->' | first }}
     {% if post.content contains '<!--preview-->' %}
-    <p><a href="{{ post.url }}">Read it</a></p>
-  {% endif %}
+    <a href="{{ post.url }}">Read it</a>
+    {% endif %}
   </div>
 </div>
 {% endfor %}
@@ -28,6 +25,3 @@ permalink:
     <a href="{{ paginator.next_page_path }}"><img class="svg-icon" src="/assets/img/right.svg" alt="Next page"></a>
   {% endif %}
 </p>
-
-</div>
-</section>

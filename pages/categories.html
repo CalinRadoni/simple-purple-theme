@@ -2,16 +2,12 @@
 title: Categories
 ---
 
-<section class="row-limited-simple">
 <ul class="tag-cloud">
 {%- assign item_list = site.categories | sort -%}
 {%- for item in item_list -%}
 <li><a href="#{{ item[0] | slugify: 'ascii' }}">{{ item[0] }} ({{item[1].size}})</a></li>
 {%- endfor -%}
 </ul>
-</section>
-
-<section class="row-limited-simple">
 
 {%- for item in item_list -%}
 <div class="tag-group">
@@ -29,5 +25,3 @@ title: Categories
 </ul>
 </div>
 {%- endfor -%}
-
-</section>
