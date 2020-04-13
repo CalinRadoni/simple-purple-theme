@@ -6,8 +6,12 @@ permalink:
 
 {% for post in paginator.posts %}
 <div class="pagination-post">
-  <p class="pagination-post-title"><a href="{{ post.url }}">{{ post.title }}</a></p>
-  <div>
+  <p class="pagination-post-title">
+    <a href="{{ post.url }}">
+      {{post.headline}} | {{ post.title }}
+    </a>
+  </p>
+  <div class="pagination-post-desc">
     {% if post.description %}
       {{ post.description }}
     {% else %}

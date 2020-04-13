@@ -27,6 +27,13 @@
       list-style-type: none;
 
       li { margin-bottom: 0.5rem }
+
+      a { font-size: 1rem; font-weight: normal }
+      span {
+        display: block;
+        font-size: 0.9rem;
+        margin-top: 0.1rem;
+      }
     }
   }
 }

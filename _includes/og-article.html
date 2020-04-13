@@ -4,16 +4,12 @@
   {%- assign xImage = "/assets/img/default-article.png" -%}
 {%- endif -%}
 
-<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-<meta property="og:type"  content="article" />
-<meta property="og:image" content="{{ xImage | absolute_url }}" />
-<meta property="og:url"   content="{{ page.url | absolute_url }}" />
-{{ }}
-{%- if page.description -%}
-  <meta property="og:description" content="{{ page.description }}" />
-{%- endif -%}
-{{ }}
-<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:title"       content="{{ page.title }}" />
+<meta property="og:type"        content="article" />
+<meta property="og:image"       content="{{ xImage | absolute_url }}" />
+<meta property="og:url"         content="{{ page.url | absolute_url }}" />
+<meta property="og:description" content="{{ page.headline }} {% if page.description %}{{ page.description }}{% endif %}" />
+<meta property="og:site_name"   content="{{ site.title }}" />
 {{ }}
 {%- if page.date -%}
   <meta property="article:published_time" content="{{ page.date }}" />
