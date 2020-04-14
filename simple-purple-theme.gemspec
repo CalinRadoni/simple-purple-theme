@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "simple-purple-theme"
-  spec.version       = "0.8.3"
+  spec.version       = "0.8.4"
   spec.authors       = ["Calin Radoni"]
   spec.email         = ["CalinRadoni@users.noreply.github.com"]
 
