@@ -7,9 +7,16 @@ permalink:
 {% for post in paginator.posts %}
 <div class="pagination-post">
   <p class="pagination-post-title">
-    <a href="{{ post.url }}">
-      {{post.headline}} | {{ post.title }}
-    </a>
+    <a href="{{ post.url }}">{{ post.headline }} | {{ post.title }}</a>
+    {% if site.post-date-in-preview %}
+      <span>
+      {%- if post.date-modified -%}
+        {{ post.date-modified | date: site.date-format }}
+      {%- else -%}
+        {{ post.date | date: site.date-format }}
+      {%- endif -%}
+      </span>
+    {% endif %}
   </p>
   <div class="pagination-post-desc">
     {% if post.description %}
@@ -18,7 +25,8 @@ permalink:
       {% if post.content contains '<!--more-->' %}
         {{ post.content | split:'<!--more-->' | first | markdownify | strip_html }}
       {% else %}
-        {{ post.content | markdownify | strip_html | truncatewords: 30 }}
+        {% assign max-len = site.post-excertp-maxlen | default: 50 %}
+        {{ post.content | markdownify | strip_html | truncatewords: max-len }}
       {% endif %}
     {% endif %}
   </div>
