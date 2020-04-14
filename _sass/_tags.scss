@@ -24,20 +24,12 @@
 
     &-title { font-weight: bold; font-size: 1.2rem }
     &-list {
+      font-size: 1rem; font-weight: normal;
       list-style-type: none;
 
       li { margin-bottom: 0.5rem }
-
-      a { font-size: 1rem; font-weight: normal }
-      span {
-        white-space: nowrap;
-        font-size: 0.9rem; font-weight: normal;
-      }
-      div {
-        display: block;
-        font-size: 0.9rem;
-        margin-top: 0.1rem;
-      }
+      span { font-size: 0.95rem; white-space: nowrap }
+      p {    font-size: 0.95rem }
     }
   }
 }

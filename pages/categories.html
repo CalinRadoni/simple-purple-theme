@@ -18,7 +18,7 @@ title: Categories
 <ul class="tag-group-list">
   {%- for post in item[1] -%}
   <li>
-    <a href="{{ post.url }}">{{post.headline}} | {{ post.title }}</a>
+    <a href="{{ post.url }}">{{post.headline}} ~ {{ post.title }}</a>
     {% if site.post-date-in-preview %}
       <span>
       {%- if post.date-modified -%}
@@ -28,7 +28,11 @@ title: Categories
       {%- endif -%}
       </span>
     {% endif %}
-    {%- if post.description -%}<div>{{ post.description }}</div>{%- endif -%}
+    {%- if site.post-desc-in-tc-pages -%}
+      {%- if post.description -%}
+      <p>{{ post.description }}</p>
+      {%- endif -%}
+    {%- endif -%}
   </li>
   {%- endfor -%}
 </ul>
