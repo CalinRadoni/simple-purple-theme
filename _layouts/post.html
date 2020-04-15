@@ -6,12 +6,14 @@ layout: article
   {% include site-header-menu.html section="home-links" %}
 </header>
 
-<section class="page-hero back-grad-3">
-  <div class="page-hero-text text-center">
+<section class="page-hero back-grad-3 text-center">
+  <div class="page-hero-text">
     <h2>{{ page.title }}</h2>
     <h1>{{ page.headline }}</h1>
-    {%- if page.description -%}
-    <h2>{{ page.description }}</h2>
+    {%- if site.post-desc-in-header -%}
+      {%- if page.description -%}
+      <h3>{{ page.description }}</h3>
+      {%- endif -%}
     {%- endif -%}
   </div>
 </section>
