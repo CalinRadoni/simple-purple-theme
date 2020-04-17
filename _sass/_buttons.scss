@@ -10,4 +10,13 @@ a.button {
       background-color: $color-back; color: $link-color;
     }
   }
+
+  &-simple, &-clear {
+    padding: 5px 1rem;
+    border-radius: 5px;
+    border: 2px solid $main-color;
+    &:hover { background-color: $color-back-2; color: $main-color }
+  }
+  &-simple { background-color: $main-color; color: $color-back }
+  &-clear  { background-color: $color-back; color: $main-color }
 }

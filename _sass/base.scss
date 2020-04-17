@@ -107,6 +107,17 @@ a.logo {
   flex: 0 0 auto;
 }
 
+.row-flex-row {
+  display: flex; flex-direction: row; flex-wrap: wrap; align-items: stretch; justify-content: center;
+  padding: 0.5rem;
+  margin: 0 auto;
+
+  &-item {
+    flex: 0 1 auto;
+    margin: 0.5rem;
+  }
+}
+
 .row-limited, .row-full {
   display: flex; flex-direction: column; align-items: stretch; justify-content: center;
   @include viewport-min-M { flex-direction: row; flex-wrap: nowrap; }
