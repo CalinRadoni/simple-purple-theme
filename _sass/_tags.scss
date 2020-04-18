@@ -10,11 +10,11 @@
     }
 
     a {
-      background-color: $color-back-1;
-      border: 1px solid $color-back-2;
-      border-radius: 3px;
+      background-color: $color-back;
+      border: 2px solid $main-color;
+      border-radius: 5px;
+      padding: 5px 0.5rem;
       white-space: nowrap;
-      padding: 0.2em 0.4em;
       &:hover { background-color: $color-back-2 }
     }
   }
