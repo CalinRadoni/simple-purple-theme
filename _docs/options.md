@@ -17,3 +17,5 @@ date: 2020-04-14
   if any, is shown in post's header;
 - `post-prev-and-next`: use `true` or `false`, if is true show links to previous
   and next posts in the first category of current post;
+- `post-related-posts`: use `true` or `false`, if is true show maximum `post-related-cnt`
+  links to related post, based on `post-related-tag-cnt` tags;

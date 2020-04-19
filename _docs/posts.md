@@ -48,4 +48,3 @@ Use `headline` for humans.
 ## Post informations
 
 To find the `next` and `previous` posts in the same category **only the first category of current post** is considered !
-

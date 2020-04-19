@@ -1,0 +1,34 @@
+{%- assign max-rel-cnt = site.post-related-cnt | default: 4 -%}
+{%- assign max-tag-cnt = site.post-related-tag-cnt | default: 2 -%}
+{%- if max-tag-cnt > page.tags.size -%}
+  {%- assign max-tag-cnt = page.tags.size -%}
+{%- endif -%}
+{%- assign rel-cnt = 0 -%}
+
+{%- assign found = false -%}
+
+{%- for post in site.posts -%}
+{%- if post.url != page.url -%}
+  {%- assign tag-cnt = 0 -%}
+  {%- for tag in post.tags -%}
+    {%- if page.tags contains tag -%}
+      {%- assign tag-cnt = tag-cnt | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if tag-cnt >= max-tag-cnt -%}
+    {%- if found == false -%}
+      {%- assign found = true -%}
+<p class="page-info-row">Related posts:</p><ul>
+    {%- endif -%} {{ }}
+    <li><a class="prev" href="{{ post.url }}">{{ post.headline }}</a>
+      ({%- for tag in post.tags -%}&nbsp;#{{ tag }}{%- endfor -%}&nbsp;)
+    </li>
+    {%- assign rel-cnt = rel-cnt | plus: 1 -%}
+  {%- endif -%}
+  {%- if rel-cnt == max-rel-cnt -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+{% if found %}</ul>{% endif %}

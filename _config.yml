@@ -32,6 +32,9 @@ post-desc-in-posts: true
 post-desc-in-tc-pages: true
 post-desc-in-header: true
 post-prev-and-next: true
+post-related-posts: true
+post-related-cnt: 4
+post-related-tag-cnt: 2
 
 # ------------------------------------------------------------------------------
 # Jekyll settings
