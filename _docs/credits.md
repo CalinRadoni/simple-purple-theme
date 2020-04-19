@@ -8,6 +8,7 @@ I have learned a lot from:
 * [W3Schools Online Web Tutorials](https://www.w3schools.com/)
 * [CSS-Tricks](https://css-tricks.com/)
 * [Jekyll](https://jekyllrb.com/)
+* [Webjeda Blog](https://blog.webjeda.com/)
 * [Material Design](https://material.io/)
 * [Intro to structured data](https://developers.google.com/search/docs/guides/intro-structured-data)
 * [JSON for Linking Data](https://json-ld.org/)
