@@ -1,0 +1,33 @@
+{%- assign catName = page.categories | first -%}
+{%- assign category = site.categories.[catName] -%}
+
+{%- assign prevPost = false -%}
+{%- assign nextPost = false -%}
+{%- assign prev = false -%}
+{%- assign found = false -%}
+
+{%- for post in category -%}
+  {%- if post.url == page.url -%}
+    {%- assign prevPost = prev -%}
+    {%- assign found = true -%}
+  {%- else -%}
+    {%- if found -%}
+      {%- assign nextPost = post -%}
+      {%- break -%}
+    {%- else -%}
+      {%- assign prev = post -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- comment -%}
+The order of posts in the list is newer to older.
+To keep the code logic, I am reversing the results for display.
+{%- endcomment -%}
+
+{%- if prevPost or nextPost -%}
+  <p class="page-info-row">In the same category:
+{%- if nextPost -%} <a class="prev" href="{{ nextPost.url }}"><img class="svg-icon" src="/assets/img/left.svg" alt="Previous post"> {{ nextPost.title }}</a> {%- endif -%}
+{%- if prevPost -%} <a class="next" href="{{ prevPost.url }}">{{ prevPost.title }} <img class="svg-icon" src="/assets/img/right.svg" alt="Next post"></a> {%- endif -%}
+  </p>
+{%- endif -%}

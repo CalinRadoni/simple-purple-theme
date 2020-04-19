@@ -16,4 +16,4 @@ date: 2020-04-14
 - `post-desc-in-header`: use `true` or `false`, if is true the post description,
   if any, is shown in post's header;
 - `post-prev-and-next`: use `true` or `false`, if is true show links to previous
-  and next posts;
+  and next posts in the first category of current post;

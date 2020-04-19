@@ -47,4 +47,5 @@ Use `headline` for humans.
 
 ## Post informations
 
-`site.post-prev-and-next`
+To find the `next` and `previous` posts in the same category **only the first category of current post** is considered !
+

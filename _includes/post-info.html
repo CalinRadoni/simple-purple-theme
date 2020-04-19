@@ -1,33 +1,37 @@
 <section class="page-info">
-  {% if page.tags.size > 0 %}
+{% if page.tags.size > 0 %}
   <p class="page-info-row">
-  <span>Tags:</span>
-  {% for item in page.tags %}
-  <a href="{% link pages/tags.html %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
-  {% endfor %}
+  <span>Tag{%- if page.tags.size >= 1 -%}s{%- endif -%}:</span>
+  {%- for item in page.tags -%}
+    <a href="{% link pages/tags.html %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
+  {%- endfor -%}
   </p>
-  {% endif %}
+{% endif %}
 
-  {% if page.categories.size > 0 %}
+{% if page.categories.size > 0 %}
   <p class="page-info-row">
-  <span>Categories:</span>
-  {% for item in page.categories %}
-  <a href="{% link pages/categories.html %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
-  {% endfor %}
+  <span>{%- if page.categories.size == 1 -%}Category:{%- else -%}Categories:{%- endif -%}</span>
+  {%- for item in page.categories -%}
+    <a href="{% link pages/categories.html %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
+  {%- endfor -%}
   </p>
-  {% endif %}
+{% endif %}
 
-  {% if page.author %}
+{% if page.author %}
   <p class="page-info-row"><span>Author:</span> {{ page.author }}</p>
-  {% endif %}
+{% endif %}
 
   <p class="page-info-row">
     {%- if page.date-modified -%}
-      <span>Updated</span> {{ page.date-modified }}
+      <span>Updated</span> {{ page.date-modified | date: site.date-format }}
     {%- else -%}
       {%- if page.date -%}
-      <span>Created</span> {{ page.date }}
+      <span>Created</span> {{ page.date | date: site.date-format }}
       {%- endif -%}
     {%- endif -%}
   </p>
+
+{% if site.post-prev-and-next %}
+  {% include prev-next-post.html %}
+{% endif %}
 </section>

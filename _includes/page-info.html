@@ -5,10 +5,10 @@
 
   <p class="page-info-row">
     {%- if page.date-modified -%}
-      <span>Updated</span> {{ page.date-modified }}
+      <span>Updated</span> {{ page.date-modified | date: site.date-format }}
     {%- else -%}
       {%- if page.date -%}
-      <span>Created</span> {{ page.date }}
+      <span>Created</span> {{ page.date | date: site.date-format }}
       {%- else -%}
       <span>Updated</span> {{ site.time | date: site.date-format }}
       {%- endif -%}
