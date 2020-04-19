@@ -27,7 +27,7 @@ To keep the code logic, I am reversing the results for display.
 
 {%- if prevPost or nextPost -%}
   <p class="page-info-row">In the same category:
-{%- if nextPost -%} <a class="prev" href="{{ nextPost.url }}"><img class="svg-icon" src="/assets/img/left.svg" alt="Previous post"> {{ nextPost.title }}</a> {%- endif -%}
-{%- if prevPost -%} <a class="next" href="{{ prevPost.url }}">{{ prevPost.title }} <img class="svg-icon" src="/assets/img/right.svg" alt="Next post"></a> {%- endif -%}
+{%- if nextPost -%} <a class="prev" href="{{ nextPost.url }}"><img class="svg-icon" src="/assets/img/left.svg" alt="Previous post"> {{ nextPost.headline }}</a> {%- endif -%}
+{%- if prevPost -%} <a class="next" href="{{ prevPost.url }}">{{ prevPost.headline }} <img class="svg-icon" src="/assets/img/right.svg" alt="Next post"></a> {%- endif -%}
   </p>
 {%- endif -%}
