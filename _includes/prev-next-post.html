@@ -21,13 +21,28 @@
 {%- endfor -%}
 
 {%- comment -%}
-The order of posts in the list is newer to older.
-To keep the code logic, I am reversing the results for display.
+The order of posts in the list is newer to older. To keep the code logic, I am reversing the results for display.
 {%- endcomment -%}
 
 {%- if prevPost or nextPost -%}
   <p class="page-info-row">In the same category:
-{%- if nextPost -%} <a class="prev" href="{{ nextPost.url }}"><img class="svg-icon" src="/assets/img/left.svg" alt="Previous post"> {{ nextPost.headline }}</a> {%- endif -%}
-{%- if prevPost -%} <a class="next" href="{{ prevPost.url }}">{{ prevPost.headline }} <img class="svg-icon" src="/assets/img/right.svg" alt="Next post"></a> {%- endif -%}
+{%- if nextPost -%}
+  {%- assign post = nextPost -%}
+  {%- if site.use-headline and post.headline -%}
+    {%- assign xTitle = post.headline -%}
+  {%- else -%}
+    {%- assign xTitle = post.title -%}
+  {%- endif -%}
+  <a class="prev" href="{{ post.url }}"><img class="svg-icon" src="/assets/img/left.svg" alt="Previous post"> {{ xTitle }}</a>
+{%- endif -%}
+{%- if prevPost -%}
+  {%- assign post = prevPost -%}
+  {%- if site.use-headline and post.headline -%}
+    {%- assign xTitle = post.headline -%}
+  {%- else -%}
+    {%- assign xTitle = post.title -%}
+  {%- endif -%}
+  <a class="next" href="{{ post.url }}">{{ xTitle }} <img class="svg-icon" src="/assets/img/right.svg" alt="Next post"></a>
+{%- endif -%}
   </p>
 {%- endif -%}

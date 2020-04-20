@@ -1,6 +1,6 @@
 ---
 date: 2020-04-11
-date-modified: 2020-04-13
+date-modified: 2020-04-20
 ---
 
 ## Preview
@@ -15,19 +15,19 @@ The preview of the posts is generated like this, in priority order:
 
 ### title, headline and description
 
-Use `title` for search engines.
-Use `headline` for humans.
+Use `title` for search engines, use `headline` for humans.
+If the option `use-headline` is `false` the `headline` variable is ignored globally.
 
 * `title` is **required**
-* `headline` is **required**
+* `headline` is **optional**
 * `description` is **optional**
 
 `title` usage:
 
 * page title in HTML
 * in the page header
-* in `seo-ldjson-article` as `headline`
-* in `og-article` as `og:title`
+* in `seo-ldjson-article` as the `headline` field
+* in `og-article` as the `og:title` property
 
 `headline` usage:
 

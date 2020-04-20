@@ -18,7 +18,12 @@ title: Tags
 <ul class="tag-group-list">
   {%- for post in item[1] -%}
   <li>
-    <a href="{{ post.url }}">{{post.headline}} ~ {{ post.title }}</a>
+    {%- if site.use-headline and post.headline -%}
+      {%- assign xTitle = post.headline -%}
+    {%- else -%}
+      {%- assign xTitle = post.title -%}
+    {%- endif -%}
+    <a href="{{ post.url }}">{{ xTitle }}</a>
     {% if site.post-date-in-preview %}
       <span>
       {%- if post.date-modified -%}

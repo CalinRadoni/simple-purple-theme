@@ -20,8 +20,14 @@
     {%- if found == false -%}
       {%- assign found = true -%}
 <p class="page-info-row">Related posts:</p><ul>
-    {%- endif -%} {{ }}
-    <li><a class="prev" href="{{ post.url }}">{{ post.headline }}</a>
+    {%- endif -%}
+    {{ }}
+    {%- if site.use-headline and post.headline -%}
+      {%- assign xTitle = post.headline -%}
+    {%- else -%}
+      {%- assign xTitle = post.title -%}
+    {%- endif -%}
+    <li><a class="prev" href="{{ post.url }}">{{ xTitle }}</a>
       ({%- for tag in post.tags -%}&nbsp;#{{ tag }}{%- endfor -%}&nbsp;)
     </li>
     {%- assign rel-cnt = rel-cnt | plus: 1 -%}

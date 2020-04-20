@@ -4,11 +4,30 @@
   {%- assign xImage = "/assets/img/default-article.png" -%}
 {%- endif -%}
 
+{%- if page.description -%}
+  {%- assign xDesc = page.description -%}
+{%- else -%}
+  {%- if post.content contains '<!--more-->' -%}
+    {%- assign xDesc = page.content | split: '<!--more-->' | first | markdownify | strip_html -%}
+  {%- else -%}
+    {% assign max-len = site.post-excertp-maxlen | default: 50 %}
+    {%- assign xDesc = page.content | markdownify | strip_html | truncatewords: max-len -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if site.use-headline -%}
+  {%- if page.headline -%}
+    {%- assign xDesc = page.headline | append: " " | append: xDesc -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign xDesc = xDesc | truncate: 160 -%}
+
 <meta property="og:title"       content="{{ page.title }}" />
 <meta property="og:type"        content="article" />
 <meta property="og:image"       content="{{ xImage | absolute_url }}" />
 <meta property="og:url"         content="{{ page.url | absolute_url }}" />
-<meta property="og:description" content="{{ page.headline }} {% if page.description %}{{ page.description }}{% endif %}" />
+<meta property="og:description" content="{{ xDesc }}" />
 <meta property="og:site_name"   content="{{ site.title }}" />
 {{ }}
 {%- if page.date -%}
@@ -19,7 +38,7 @@
   <meta property="article:modified_time" content="{{ page.date-modified | date: %F}}" />
 {%- endif -%}
 
-{%- assign item_list = page.tags | sort -%}
+{%- assign item_list = page.tags -%}
 {% for item in item_list %}
 <meta property="article:tag" content="{{ item }}" />
 {%- endfor -%}

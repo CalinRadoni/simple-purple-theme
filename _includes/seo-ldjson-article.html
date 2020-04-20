@@ -1,3 +1,22 @@
+{%- if page.description -%}
+  {%- assign xDesc = page.description -%}
+{%- else -%}
+  {%- if post.content contains '<!--more-->' -%}
+    {%- assign xDesc = page.content | split: '<!--more-->' | first | markdownify | strip_html -%}
+  {%- else -%}
+    {% assign max-len = site.post-excertp-maxlen | default: 50 %}
+    {%- assign xDesc = page.content | markdownify | strip_html | truncatewords: max-len -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if site.use-headline -%}
+  {%- if page.headline -%}
+    {%- assign xDesc = page.headline | append: " " | append: xDesc -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign xDesc = xDesc | truncate: 160 -%}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -7,7 +26,7 @@
     "@id": "{{ page.url | absolute_url }}"
   },
   "headline": "{{ page.title }}",
-  "description": "{{ page.headline }} {% if page.description %}{{ page.description }}{% endif %}",
+  "description": "{{ xDesc }}",
   "image": [ {% if page.image %}"{{ page.image }}"{% else %}"{{ "/assets/img/default-article.png" }}"{% endif %} ],
   {% if page.date %}"datePublished": "{{ page.date }}",{% endif %}
   {% if page.date-modified %}"dateModified": "{{ page.date-modified | date: %F}}",{% endif %}

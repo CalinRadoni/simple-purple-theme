@@ -23,6 +23,8 @@ doc-links:
         url: /docs/settings
       - name: "Override theme defaults"
         url: /docs/overriding-defaults
+      - name: "Search Engine Optimization"
+        url: /docs/seo
   - title: "Posts and pages"
     items:
       - name: "Pages"
