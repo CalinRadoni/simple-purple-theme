@@ -11,9 +11,10 @@ It is used in:
 * `og-article.html`, property `og:description`
 * `seo-ldjson-article.html`, json field `description`
 
-and build using the following code:
+and built using the following code:
 
-```liquid
+{% highlight liquid %}
+{% raw %}
 {%- if page.description -%}
   {%- assign xDesc = page.description -%}
 {%- else -%}
@@ -32,4 +33,5 @@ and build using the following code:
 {%- endif -%}
 
 {%- assign xDesc = xDesc | truncate: 160 -%}
-```
+{% endraw %}
+{% endhighlight %}
