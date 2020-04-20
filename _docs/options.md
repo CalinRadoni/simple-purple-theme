@@ -5,8 +5,8 @@ date-modified: 2020-04-20
 
 ## Skin options
 
-- `post-excertp-maxlen`: *number-of-words*, default value 50, used to limit the
-  length of the automatically generated excertp in Posts and SEO records. Note:
+- `post-excerpt-maxlen`: *number-of-words*, default value 50, used to limit the
+  length of the automatically generated excerpt in Posts and SEO records. Note:
   *In SEO records there is one more limit of 160 characters for descriptions, automatically imposed*;
 - `post-date-in-preview`: use `true` or `false`, if is true the date is shown
   after the post's title in Categories, Tags and Posts pages;

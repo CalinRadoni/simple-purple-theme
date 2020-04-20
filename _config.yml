@@ -26,7 +26,7 @@ social-links:
   - site: LinkedIn
     link: https://www.linkedin.com/in/...
 
-post-excertp-maxlen: 50
+post-excerpt-maxlen: 50
 post-date-in-preview: true
 post-desc-in-posts: true
 post-desc-in-tc-pages: true

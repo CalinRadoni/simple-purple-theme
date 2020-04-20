@@ -4,7 +4,7 @@
   {%- if post.content contains '<!--more-->' -%}
     {%- assign xDesc = page.content | split: '<!--more-->' | first | markdownify | strip_html -%}
   {%- else -%}
-    {% assign max-len = site.post-excertp-maxlen | default: 50 %}
+    {% assign max-len = site.post-excerpt-maxlen | default: 50 %}
     {%- assign xDesc = page.content | markdownify | strip_html | truncatewords: max-len -%}
   {%- endif -%}
 {%- endif -%}
