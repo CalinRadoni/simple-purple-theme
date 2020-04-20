@@ -6,10 +6,12 @@ date: 2020-04-20
 
 ## SEO Description
 
-Is used in:
+It is used in:
 
 * `og-article.html`, property `og:description`
 * `seo-ldjson-article.html`, json field `description`
+
+and build using the following code:
 
 ```liquid
 {%- if page.description -%}
