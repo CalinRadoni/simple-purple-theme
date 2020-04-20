@@ -8,6 +8,7 @@
   </p>
 {% endif %}
 
+{% if site.post-show-category %}
 {% if page.categories.size > 0 %}
   <p class="page-info-row">
   <span>{%- if page.categories.size == 1 -%}Category:{%- else -%}Categories:{%- endif -%}</span>
@@ -15,6 +16,7 @@
     <a href="{% link pages/categories.html %}#{{ item | slugify: 'ascii' }}">{{ item }}</a>
   {%- endfor -%}
   </p>
+{% endif %}
 {% endif %}
 
 {% if page.author %}

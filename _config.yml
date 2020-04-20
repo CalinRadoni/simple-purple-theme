@@ -35,6 +35,7 @@ post-prev-and-next: true
 post-related-posts: true
 post-related-cnt: 4
 post-related-tag-cnt: 2
+post-show-category: true
 
 # ------------------------------------------------------------------------------
 # Jekyll settings

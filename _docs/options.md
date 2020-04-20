@@ -19,3 +19,5 @@ date: 2020-04-14
   and next posts in the first category of current post;
 - `post-related-posts`: use `true` or `false`, if is true show maximum `post-related-cnt`
   links to related post, based on `post-related-tag-cnt` tags;
+- `post-show-category`: use `true` or `false`, if is true show category / categories
+  in page info;
