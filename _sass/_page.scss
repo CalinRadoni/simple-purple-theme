@@ -30,6 +30,8 @@
     width: 100%; max-width: $page-body-width;
     border-top: 1px solid $color-back-1;
 
+    ul { list-style-type: none }
+
     &-row {
       margin-bottom: 0.5rem;
       &:last-child { margin-bottom: 0 }

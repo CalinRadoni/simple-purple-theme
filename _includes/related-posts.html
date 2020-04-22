@@ -19,7 +19,8 @@
   {%- if tag-cnt >= max-tag-cnt -%}
     {%- if found == false -%}
       {%- assign found = true -%}
-<p class="page-info-row">Related posts:</p><ul>
+<p class="page-info-row">Related posts:</p>
+<ul class="page-info-row">
     {%- endif -%}
     {{ }}
     {%- if site.use-headline and post.headline -%}
