@@ -3,9 +3,8 @@
 </a>
 <nav>
   <ul>
-{%- assign nav-section = site.data.navigation[include.section] -%}
-{% for nav in nav-section %}
-    <li><a href="{{ nav.url }}"{% if nav.url == page.url %} class="active-link"{% endif %}>{{ nav.name }}</a></li>
-{% endfor %}
-  <ul>
+{%- for item in site.header-links -%}
+  <li><a href="{{ item.url }}"{% if item.url == page.url %} class="active-link"{% endif %}>{{ item.name }}</a></li>
+{%- endfor -%}
+  </ul>
 </nav>
