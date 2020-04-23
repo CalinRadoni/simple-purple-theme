@@ -97,6 +97,7 @@ section {
     a {
       padding: 0.5em;
       font-size: 1rem;
+      border-radius: 3px;
       &:hover { background-color: $color-back-2 }
     }
     a.active-link { font-weight: bolder }
