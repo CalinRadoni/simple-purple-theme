@@ -171,7 +171,7 @@ a.logo {
 .back-grad-3 {
   background-image: linear-gradient($color-back, $color-back-3);
 }
-.color-back-1 { background-color: $color-back-1 }
+.back-footer-color { background-color: $footer-color }
 .color-back-2 { background-color: $color-back-2 }
 .color-back-3 { background-color: $color-back-3 }
 
@@ -180,6 +180,6 @@ a.logo {
 .color-back-green  { background-color: $color-back-green }
 .color-back-blue   { background-color: $color-back-blue }
 
-.border-color-back-1 { border-color: $color-back-1 }
+.border-footer-color { border-color: $footer-color }
 .border-color-back-2 { border-color: $color-back-2 }
 .border-color-back-3 { border-color: $color-back-3 }
