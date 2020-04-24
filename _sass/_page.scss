@@ -42,7 +42,7 @@
         padding: 3px 0.5rem;
         margin-left: 3px;
         white-space: nowrap;
-        &:hover { background-color: $color-back-2 }
+        &:hover { background-color: $hover-color }
       }
 
       a.next, a.prev { border: none; display: inline-block }

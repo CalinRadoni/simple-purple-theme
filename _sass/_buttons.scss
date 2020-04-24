@@ -15,7 +15,7 @@ a.button {
     border: 2px solid $main-color;
     border-radius: 5px;
     padding: 5px 1rem;
-    &:hover { background-color: $color-back-2; color: $main-color }
+    &:hover { background-color: $hover-color; color: $main-color }
   }
   &-simple { background-color: $main-color; color: $color-back }
   &-clear  { background-color: $color-back; color: $main-color }

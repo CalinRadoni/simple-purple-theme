@@ -98,7 +98,7 @@ section {
       padding: 0.5em;
       font-size: 1rem;
       border-radius: 3px;
-      &:hover { background-color: $color-back-2 }
+      &:hover { background-color: $hover-color }
     }
     a.active-link { font-weight: bolder }
   }
@@ -172,7 +172,7 @@ a.logo {
   background-image: linear-gradient($color-back, $color-back-3);
 }
 .back-footer-color { background-color: $footer-color }
-.color-back-2 { background-color: $color-back-2 }
+.back-hover-color { background-color: $hover-color }
 .color-back-3 { background-color: $color-back-3 }
 
 .color-back-red    { background-color: $color-back-red }
@@ -181,5 +181,5 @@ a.logo {
 .color-back-blue   { background-color: $color-back-blue }
 
 .border-footer-color { border-color: $footer-color }
-.border-color-back-2 { border-color: $color-back-2 }
+.border-hover-color { border-color: $hover-color }
 .border-color-back-3 { border-color: $color-back-3 }
