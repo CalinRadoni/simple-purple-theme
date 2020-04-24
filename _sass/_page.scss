@@ -67,7 +67,6 @@
   &-sidebar {
     width: 100%;
     padding: 1rem;
-    // background-color: $color-back-3;
     @include viewport-min-M {
       padding-left: 1rem;
       min-width: $page-sidebar-minw;

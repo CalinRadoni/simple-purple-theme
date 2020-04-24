@@ -168,18 +168,19 @@ a.logo {
 .text-center { text-align: center }
 .text-right  { text-align: right  }
 
-.back-grad-3 {
-  background-image: linear-gradient($color-back, $color-back-3);
+.back-grad {
+  background-image: linear-gradient($grad-top-color, $grad-bottom-color);
 }
-.back-footer-color { background-color: $footer-color }
-.back-hover-color { background-color: $hover-color }
-.color-back-3 { background-color: $color-back-3 }
+
+.back-footer-color      { background-color: $footer-color }
+.back-hover-color       { background-color: $hover-color }
+.back-grad-bottom-color { background-color: $grad-bottom-color }
 
 .color-back-red    { background-color: $color-back-red }
 .color-back-yellow { background-color: $color-back-yellow }
 .color-back-green  { background-color: $color-back-green }
 .color-back-blue   { background-color: $color-back-blue }
 
-.border-footer-color { border-color: $footer-color }
-.border-hover-color { border-color: $hover-color }
-.border-color-back-3 { border-color: $color-back-3 }
+.border-footer-color      { border-color: $footer-color }
+.border-hover-color       { border-color: $hover-color }
+.border-grad-bottom-color { border-color: $grad-bottom-color }
