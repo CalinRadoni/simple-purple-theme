@@ -62,21 +62,30 @@ layout: home
 
 <section class="row-limited">
   <div class="card card-2 border-hover-color">
-    <div class="card-title">Title A</div>
+    <div class="card-title">Title 1</div>
     <div class="card-body stretched text-right">
-      <p>flex 2 with border, stretched, aligned right</p>
+      <p>flex 2 with border, stretched, right aligned</p>
+    </div>
+  </div>
+  <div class="card card-3">
+    <div class="card-title">Title 2</div>
+    <div class="card-body stretched text-center">
+      <p>flex 3</p>
+      <p>stretched</p>
+      <p>center aligned</p>
     </div>
   </div>
   <div class="card card-3 border-hover-color">
-    <div class="card-title">Title A</div>
-    <div class="card-body stretched text-center">
-      <p>flex 3 with border, stretched, center aligned</p>
+    <div class="card-title">Title 3</div>
+    <div class="card-body stretched text-left">
+      <p>flex 3 with border</p>
+      <p>stretched, left aligned</p>
     </div>
   </div>
   <div class="card border-hover-color">
-    <div class="card-title">Title B</div>
-    <div class="card-body stretched text-left">
-      <p>flex 1 with border, stretched, aligned left</p>
+    <div class="card-title">Title 4</div>
+    <div class="card-body stretched text-center">
+      <p>flex 1 with border, stretched, center aligned</p>
     </div>
   </div>
 </section>
@@ -142,7 +151,11 @@ layout: home
       <ul>
         {%- for post in site.posts limit:5 -%}
           <li>
-            <a href="{{ post.url }}">{{ post.headline }} | {{ post.title }}</a>
+            {%- assign xTitle = post.title -%}
+            {%- if site.use-headline and post.headline -%}
+              {%- assign xTitle = post.headline | append: " ~ " | append: post.title -%}
+            {%- endif -%}
+            <a href="{{ post.url }}">{{ xTitle }}</a>
           </li>
         {%- endfor -%}
       </ul>
