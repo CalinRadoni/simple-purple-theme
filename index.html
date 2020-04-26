@@ -15,9 +15,13 @@ layout: home
   <img class="home-hero-image" src="/assets/img/Hero-home-600x400.png">
 </section>
 
+{% include_relative /assets/img/index.svg %}
+
 <section class="row-limited">
   <div class="card">
-    <div class="card-title"><img class="card-title-img" src="/assets/img/list.svg"></div>
+    <div class="card-title">
+      <svg class="card-title-img"><use xlink:href="#img-list" /></svg>
+    </div>
     <div class="card-body">
       <p>Responsive</p>
       <p>Fluid typography</p>
@@ -26,7 +30,9 @@ layout: home
     </div>
   </div>
   <div class="card">
-    <div class="card-title"><img class="card-title-img" src="/assets/img/colors.svg"></div>
+    <div class="card-title">
+      <svg class="card-title-img"><use xlink:href="#img-colors" /></svg>
+    </div>
     <div class="card-body">
       <p class="card-row">
         <span class="card-box-1" style="background-color: #a300a3">&nbsp;</span>
@@ -39,7 +45,9 @@ layout: home
     </div>
   </div>
   <div class="card text-center">
-    <div class="card-title"><img class="card-title-img" src="/assets/img/play.svg"></div>
+    <div class="card-title">
+      <svg class="card-title-img"><use xlink:href="#img-play" /></svg>
+    </div>
     <div class="card-body">
       <p>This theme was built for <a href="https://calinradoni.github.io/">calinradoni.github.io</a></p>
       <p>See it there in action.</p>

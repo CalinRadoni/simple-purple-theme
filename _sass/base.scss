@@ -145,6 +145,8 @@ a.logo {
   width: 1em; height: 1em;         // Scale the icon to match the font-size of the parent element.
   fill: currentColor;              // Let the icon take whatever color the parent has.
 }
+.svg-fill { fill: $color-on-back; fill-opacity: 1 }
+.svg-s1 { stroke: $color-on-back; stroke-width: 1px; opacity: 0.9 }
 
 // layouts
 @import '_home';
