@@ -43,10 +43,10 @@ permalink:
 
 <p class="text-center">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}"><img class="svg-icon" src="/assets/img/left.svg" alt="Previous page"></a>
+    <a href="{{ paginator.previous_page_path }}"><svg class="svg-icon" alt="Previous page"><use xlink:href="#img-left" /></svg></a>
   {% endif %}
     <span class="pagination-page-cnt">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}"><img class="svg-icon" src="/assets/img/right.svg" alt="Next page"></a>
+    <a href="{{ paginator.next_page_path }}"><svg class="svg-icon" alt="Next page"><use xlink:href="#img-right" /></svg></a>
   {% endif %}
 </p>

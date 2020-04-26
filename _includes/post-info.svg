@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="img-left" viewBox="0 0 24 24">
+        <title>left.svg</title>
+        <path fill="none" d="M0 0h24v24H0V0z" />
+        <path class="svg-fill" d="M 17.3,1.3 6.7,12 17.3,22.7 Z" />
+    </symbol>
+
+    <symbol id="img-right" viewBox="0 0 24 24">
+        <title>right.svg</title>
+        <path fill="none" d="M0 0h24v24H0V0z" />
+        <path class="svg-fill" d="M 6.7,22.7 17.3,12 6.7,1.3 Z" />
+    </symbol>
+
+    <symbol id="img-page" viewBox="0 0 24 24">
+        <title>page.svg</title>
+        <path fill="none" d="M0 0h24v24H0V0z" />
+        <path class="svg-fill" d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+    </symbol>
+
+    <symbol id="img-tag" viewBox="0 0 24 24">
+        <title>tags.svg</title>
+        <path fill="none" d="M0 0h24v24H0V0z" />
+        <path class="svg-fill" d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01L4 11V4h7v-.01l9 9-7 7.02z" />
+        <circle cx="8.2" cy="8.2" r="1.5" />
+    </symbol>
+</svg>

@@ -12,7 +12,7 @@ title: Categories
 {%- for item in item_list -%}
 <div class="tag-group">
 <p class="tag-group-title">
-  <img class="svg-icon" src="/assets/img/page.svg" alt="Category">
+  <svg class="svg-icon" alt="Category"><use xlink:href="#img-page" /></svg>
   <span id="{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</h3>
 </p>
 <ul class="tag-group-list">

@@ -12,7 +12,7 @@ title: Tags
 {%- for item in item_list -%}
 <div class="tag-group">
 <p class="tag-group-title">
-  <img class="svg-icon" src="/assets/img/tags.svg" alt="Tag">
+  <svg class="svg-icon" alt="Tag"><use xlink:href="#img-tag" /></svg>
   <span id="{{ item[0] | slugify: 'ascii' }}">{{ item[0] }}</h3>
 </p>
 <ul class="tag-group-list">
