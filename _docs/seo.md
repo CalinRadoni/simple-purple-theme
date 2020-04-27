@@ -35,3 +35,11 @@ and built using the following code:
 {%- assign xDesc = xDesc | truncate: 160 -%}
 {% endraw %}
 {% endhighlight %}
+
+## SEO Image
+
+For image size it seems the prefered sizes are:
+
+* 1200 x 630 px;
+* 600 x 315 px;
+* at least, keep the 1.91:1 aspect ratio.

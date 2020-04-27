@@ -41,6 +41,20 @@ If the option `use-headline` is `false` the `headline` variable is ignored globa
 * in `tags` and `categories` pages
 * in `Posts` page
 
+### image
+
+The image is used in SEO. Options (with notes from [A Guide to Sharing for Webmasters](https://developers.facebook.com/docs/sharing/webmasters) and [The Open Graph protocol - Structured Properties](https://ogp.me/#structured)) are:
+
+* `image` is the URL of the image associated with this post. The image type can
+  be one of `image/jpeg`, `image/gif` or `image/png`;
+* `image-d` is a description of what is in the image (not a caption). If the
+  page specifies an `og:image` it should specify `og:image:alt`;
+* `image-w` and `image-h` are the width and height of image in pixels. Specify
+  width and height for your image to ensure that the image loads properly the
+  first time it's shared.
+
+See also the [SEO]({% link _docs/seo.md %}) document.
+
 ## Header
 
 `site.post-desc-in-header`

@@ -27,7 +27,7 @@
   },
   "headline": "{{ page.title }}",
   "description": "{{ xDesc }}",
-  "image": [ {% if page.image %}"{{ page.image }}"{% else %}"{{ "/assets/img/default-article.png" }}"{% endif %} ],
+  {% if page.image %}"image": "{{ page.image | absolute_url }}",{% endif %}
   {% if page.date %}"datePublished": "{{ page.date }}",{% endif %}
   {% if page.date-modified %}"dateModified": "{{ page.date-modified | date: %F}}",{% endif %}
   "author": {
@@ -39,7 +39,7 @@
     "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.logo }}"
+      "url": "{{ site.logo | absolute_url }}"
     }
   }
 }
