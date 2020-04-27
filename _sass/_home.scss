@@ -3,7 +3,7 @@
 .home {
   a { font-weight: inherit; text-decoration: none }
 
-  $home-hero-height: 400px;
+  $home-hero-height: 315px;
 
   &-hero {
     position: relative;
@@ -44,4 +44,7 @@
       z-index: 1;
     }
   }
+
+  &-svg-ff { fill: $footer-color; fill-opacity: 1; stroke: $color-on-back; stroke-width: 1px }
+  &-svg-fh { fill: $hover-color;  fill-opacity: 1; stroke: $color-on-back; stroke-width: 1px }
 }
