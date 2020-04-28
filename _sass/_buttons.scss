@@ -3,11 +3,11 @@
 a.button {
   &-main {
     padding: 0.5rem 1rem;
-    border-radius: 100vh;
-    background-color: $main-color; color: $color-back;
-    border: 0.3rem solid $main-color;
+    border-radius: 5em;
+    background-color: $link-color; color: $color-back;
+    border: 0.3rem solid $link-color;
     &:hover {
-      background-color: $color-back; color: $link-color;
+      background-color: $hover-color; color: $link-color;
     }
   }
 

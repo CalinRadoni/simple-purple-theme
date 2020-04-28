@@ -18,8 +18,8 @@ copyright-text: "2020"
 # set the date format to ISO8601. See https://shopify.github.io/liquid/filters/date/ for other formats
 date-format: "%F"
 
-# skin: purple
-skin: blue
+skin: purple
+# skin: blue
 
 header-links:
   - name: "Quick Start"
