@@ -18,6 +18,7 @@ copyright-text: "2020"
 # set the date format to ISO8601. See https://shopify.github.io/liquid/filters/date/ for other formats
 date-format: "%F"
 
+remote_theme: "CalinRadoni/simple-purple-theme"
 skin: purple
 # skin: blue
 
@@ -100,5 +101,5 @@ plugins:
 
 # setting for jekyll-paginate
 # jekyll-paginate will produce pagination from /pages/index.html page
-paginate: 10
+paginate: 5
 paginate_path: "/pages/page:num"
