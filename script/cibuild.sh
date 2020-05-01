@@ -2,6 +2,8 @@
 
 set -e
 
+cd docs
+
 echo "Building the example site..."
 bundle exec jekyll build
 
@@ -12,6 +14,8 @@ else
   echo "Failed to build the example site !"
   exit 1
 fi
+
+cd ..
 
 gem build simple-purple-theme.gemspec
 rm --force simple-purple-theme*.gem
