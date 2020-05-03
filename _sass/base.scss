@@ -149,6 +149,11 @@ img.logo { width: 100px; height: 50px }
 .svg-fill { fill: $color-on-back; fill-opacity: 1 }
 .svg-s1 { stroke: $color-on-back; stroke-width: 1px; opacity: 0.9 }
 
+code.language-plaintext {
+  background-color: $code-color;
+  white-space: nowrap;
+}
+
 // layouts
 @import '_home';
 @import '_page';
