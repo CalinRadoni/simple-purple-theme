@@ -1,11 +1,11 @@
 ---
-categories: [ "Documentation" ]
-tags: [ "colors", "skins" ]
 date: 2020-04-02
-date-modified: 2020-04-07
+date-modified: 2020-05-03
 ---
 
 # Skins
+
+**For now these are just notes, do not waste your time reading them !**
 
 ## Colors
 

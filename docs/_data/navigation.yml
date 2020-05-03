@@ -8,18 +8,24 @@ doc-links:
         url: /docs/skins
   - title: "Configuration"
     items:
-      - name: "Setting"
+      - name: "Settings"
         url: /docs/settings
       - name: "Override theme defaults"
         url: /docs/overriding-defaults
       - name: "Search Engine Optimization"
         url: /docs/seo
+      - name: "Plugins"
+        url: /docs/plugins
+      - name: "Highlighting"
+        url: /docs/highlight
   - title: "Posts and pages"
     items:
       - name: "Pages"
         url: /docs/pages
       - name: "Posts"
         url: /docs/posts
+      - name: "Links"
+        url: /docs/links
   - title: "Notes"
     items:
       - name: "About"

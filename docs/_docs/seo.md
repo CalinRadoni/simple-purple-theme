@@ -1,8 +1,12 @@
 ---
 title: Search Engine Optimization
 date: 2020-04-20
-# date-modified: 2020-
+date-modified: 2020-05-03
 ---
+
+# Search Engine Optimization
+
+**This page is work-in-progress.**
 
 ## SEO Description
 
@@ -38,7 +42,7 @@ and built using the following code:
 
 ## SEO Image
 
-For image size it seems the prefered sizes are:
+For image size the preferred sizes are:
 
 * 1200 x 630 px;
 * 600 x 315 px;

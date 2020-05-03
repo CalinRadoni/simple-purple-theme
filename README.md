@@ -10,7 +10,7 @@ It have its own demo pages and documentation at [simple-purple-theme](https://ca
 
 I wanted a simple, Javascript free theme.
 
-## Installation
+## Installation and usage
 
 Here are three ways to use the theme:
 
@@ -18,7 +18,7 @@ Here are three ways to use the theme:
 * as a Ruby gem
 * by copying the files
 
-### As a remote theme
+### As a remote theme for GitHub Pages
 
 For GitHub Pages, having a content like this for the `Gemfile`:
 
@@ -46,7 +46,7 @@ If you start in an empty directory you need:
    directory as a starting point;
 2. the `pages` directory. Create it and add the files from theme's `docs/pages` in it;
 3. the `_posts` directory. Create it and put your posts in it;
-4. the `assets/img` directory to hold your images; Copy the `logo.svg` from the `demo`
+4. the `assets/img` directory to hold your images. Copy the `logo.svg` from the `demo`
    directory in it.
 
 ```tree
@@ -66,6 +66,8 @@ To test it, run `bundle exec jekyll serve` and open your browser at
 [http://127.0.0.1:4000/demo/](http://127.0.0.1:4000/demo/).
 
 ### As a gem - NOT TESTED
+
+*Warning: This section is work-in-progress !*
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -90,7 +92,7 @@ Or install it yourself as:
 
 ### By copying the files
 
-Fork or copy theme's files form [github.com/CalinRadoni/simple-purple-theme](https://github.com/CalinRadoni/simple-purple-theme).
+Fork or copy theme's files from [github.com/CalinRadoni/simple-purple-theme](https://github.com/CalinRadoni/simple-purple-theme).
 
 If you start in an empty directory you need:
 
