@@ -2,17 +2,17 @@
 
 $main-color:        #0f4c81; // hsl(208, 79%, 28%)
 
-$color-back:        $main-color;
-$color-on-back:     #e4f1fc; // hsl(208, 79%, 94%)
-$link-color:        #5faaec; // hsl(208, 79%, 65%)
+$color-back:        #ffffff;
+$color-on-back:     #33374d; // hsl(230, 20%, 25%)
+$link-color:        #0e4677; // hsl(208, 79%, 26%)
 
-$footer-color:      $main-color;
-$hover-color:       #156bb7; // hsl(208, 79%, 40%)
-$code-color:        #115692; // hsl(208, 79%, 32%)
-$grad-top-color:    $main-color;
-$grad-bottom-color: $main-color;
+$footer-color:      #99cfff; // hsl(208, 100%, 80%)
+$hover-color:       #daecfb; // hsl(208, 79%, 92%)
+$code-color:        #daecfb; // hsl(208, 79%, 92%)
+$grad-top-color:    $color-back;
+$grad-bottom-color: #edf5fd; // hsl(208, 79%, 96%)
 
-$red-color:        #990000; // hsl(  0, 100%, 30%)
-$yellow-color:     #adad00; // hsl( 60, 100%, 34%)
-$green-color:      #009900; // hsl(120, 100%, 30%)
-$blue-color:       #000099; // hsl(180, 100%, 30%)
+$red-color:        #ffe5e5; // hsl(  0, 100%, 95%)
+$yellow-color:     #ffffe5; // hsl( 60, 100%, 95%)
+$green-color:      #e5ffe5; // hsl(120, 100%, 95%)
+$blue-color:       #e5ffff; // hsl(180, 100%, 95%)
