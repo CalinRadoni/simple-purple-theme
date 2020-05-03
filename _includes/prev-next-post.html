@@ -33,7 +33,7 @@ The order of posts in the list is newer to older. To keep the code logic, I am r
   {%- else -%}
     {%- assign xTitle = post.title -%}
   {%- endif -%}
-  <a class="prev" href="{{ post.url }}"><svg class="svg-icon" alt="Previous post"><use xlink:href="#img-left" /></svg> {{ xTitle }}</a>
+  <a class="prev" href="{{ post.url | relative_url }}"><svg class="svg-icon" alt="Previous post"><use xlink:href="#img-left" /></svg> {{ xTitle }}</a>
 {%- endif -%}
 {%- if prevPost -%}
   {%- assign post = prevPost -%}
@@ -42,7 +42,7 @@ The order of posts in the list is newer to older. To keep the code logic, I am r
   {%- else -%}
     {%- assign xTitle = post.title -%}
   {%- endif -%}
-  <a class="next" href="{{ post.url }}">{{ xTitle }} <svg class="svg-icon" alt="Next post"><use xlink:href="#img-right" /></svg></a>
+  <a class="next" href="{{ post.url | relative_url }}">{{ xTitle }} <svg class="svg-icon" alt="Next post"><use xlink:href="#img-right" /></svg></a>
 {%- endif -%}
   </p>
 {%- endif -%}

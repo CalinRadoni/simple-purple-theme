@@ -5,7 +5,9 @@
 title: "simple-purple-theme"
 description: "Responsive, Fluid typography, SEO for Google Search, Jekyll theme for GitHub Pages"
 logo: /assets/img/logo.svg
-url: "https://calinradoni.github.io/"
+
+# this site is published in GitHub Pages under the "simple-purple-theme" path
+baseurl: /simple-purple-theme
 
 # ------------------------------------------------------------------------------
 # Theme settings

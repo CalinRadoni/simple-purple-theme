@@ -23,7 +23,7 @@ title: Categories
     {%- else -%}
       {%- assign xTitle = post.title -%}
     {%- endif -%}
-    <a href="{{ post.url }}">{{ xTitle }}</a>
+    <a href="{{ post.url | relative_url }}">{{ xTitle }}</a>
     {% if site.post-date-in-preview %}
       <span>
       {%- if post.date-modified -%}

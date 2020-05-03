@@ -12,7 +12,7 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     <h2>{{ site.description }}</h2>
     <nav>
       <ul>
-        <li><a class="button-main" href="{% link _docs/quick-start.md %}">Documentation</a></li>
+        <li><a class="button-main" href="{{ site.baseurl }}{% link _docs/quick-start.md %}">Documentation</a></li>
       </ul>
     </nav>
   </div>
@@ -155,16 +155,16 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     <h2>Pages</h2>
     <nav>
       <ul>
-        <li><a href="{% link pages/about.md %}">About</a></li>
-        <li><a href="{% link pages/categories.html %}">Categories</a></li>
-        <li><a href="{% link pages/tags.html %}">Tags</a></li>
+        <li><a href="{{ site.baseurl }}{% link pages/about.md %}">About</a></li>
+        <li><a href="{{ site.baseurl }}{% link pages/categories.html %}">Categories</a></li>
+        <li><a href="{{ site.baseurl }}{% link pages/tags.html %}">Tags</a></li>
       </ul>
     </nav>
     </div>
   </div>
   <div class="card">
     <div class="card-body stretched text-left">
-    <a href="{% link pages/index.html %}"><h2>Posts</h2></a>
+    <a href="{{ site.baseurl }}{% link pages/index.html %}"><h2>Posts</h2></a>
     <p> These are the newest posts:</p>
     <nav>
       <ul>
@@ -174,7 +174,7 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
             {%- if site.use-headline and post.headline -%}
               {%- assign xTitle = post.headline | append: " ~ " | append: post.title -%}
             {%- endif -%}
-            <a href="{{ post.url }}">{{ xTitle }}</a>
+            <a href="{{ post.url | relative_url }}">{{ xTitle }}</a>
           </li>
         {%- endfor -%}
       </ul>

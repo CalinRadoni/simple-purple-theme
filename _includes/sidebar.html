@@ -6,7 +6,7 @@
       {%- if item.text -%}
       <p class="page-side-text">{{ item.text }}</p>
       {%- else -%}
-      <p class="page-side-text"><a href="{{ item.url }}"{% if item.url == page.url %} class="active-link"{% endif %}>{{ item.name }}</a></p>
+      <p class="page-side-text"><a href="{{ item.url | relative_url }}"{% if item.url == page.url %} class="active-link"{% endif %}>{{ item.name }}</a></p>
       {%- endif -%}
     {% endfor %}
   {% endif %}

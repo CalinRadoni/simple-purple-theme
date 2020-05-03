@@ -91,6 +91,7 @@
       text-align: right; display: block; margin-right: 0 !important;
       &:before { content: ""; margin-right: 0 }
     }
+    a.active-link { font-weight: bolder }
   }
 
   &-column {

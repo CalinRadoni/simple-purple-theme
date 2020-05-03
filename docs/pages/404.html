@@ -9,9 +9,9 @@ permalink: /404.html
   <p>The requested page is not here.</p>
   <p>Don't panic ! We have other pages.</p>
   <p class="row-flex-row">
-    <a class="button-simple row-flex-row-item" href="{% link index.html %}">Homepage</a>
-    <a class="button-clear  row-flex-row-item" href="{% link pages/index.html %}">Posts</a>
-    <a class="button-clear  row-flex-row-item" href="{% link pages/categories.html %}">Categories</a>
-    <a class="button-clear  row-flex-row-item" href="{% link pages/tags.html %}">Tags</a>
+    <a class="button-simple row-flex-row-item" href="{{ site.baseurl }}{% link index.html %}">Homepage</a>
+    <a class="button-clear  row-flex-row-item" href="{{ site.baseurl }}{% link pages/index.html %}">Posts</a>
+    <a class="button-clear  row-flex-row-item" href="{{ site.baseurl }}{% link pages/categories.html %}">Categories</a>
+    <a class="button-clear  row-flex-row-item" href="{{ site.baseurl }}{% link pages/tags.html %}">Tags</a>
   </p>
 </article>

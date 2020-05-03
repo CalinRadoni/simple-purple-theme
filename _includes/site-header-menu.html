@@ -1,10 +1,10 @@
-<a class="logo" href="/">
-  <img class="logo" src="{{site.logo}}" alt="Site logo">
+<a class="logo" href="{{ site.baseurl }}/">
+  <img class="logo" src="{{ site.logo | relative_url }}" alt="Site logo">
 </a>
 <nav>
   <ul>
 {%- for item in site.header-links -%}
-  <li><a href="{{ item.url }}"{% if item.url == page.url %} class="active-link"{% endif %}>{{ item.name }}</a></li>
+  <li><a href="{{ item.url | relative_url }}"{% if item.url == page.url %} class="active-link"{% endif %}>{{ item.name }}</a></li>
 {%- endfor -%}
   </ul>
 </nav>

@@ -3,6 +3,17 @@ date: 2020-04-14
 date-modified: 2020-04-20
 ---
 
+## Site options
+
+Notes from [Jekyll style guide](https://ben.balter.com/jekyll-style-guide/config/):
+
+`baseurl`:
+
+- If your site lives at example.com/blog, you should have a baseurl of /blog
+- f your site lives at example.com, you should not set a baseurl. Not even /.
+
+`url`: it is automatically set in development mode to http://localhost:4000 since Jekyll 3.3 and by GitHub Pages in production
+
 ## Skin options
 
 - `post-excerpt-maxlen`: *number-of-words*, default value 50, used to limit the
