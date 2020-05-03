@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
+  <defs>
+  <linearGradient id="logoGrad" gradientTransform="rotate(90)">
+    <stop offset="00%"  stop-color="#4020ff" />
+    <stop offset="99%"  stop-color="#ff20ff" />
+  </linearGradient>
+  </defs>
+
+  <text
+    text-anchor="middle" dominant-baseline="middle" x="50%" y="55%"
+    textLength="90%" lengthAdjust="spacingAndGlyphs"
+    font-family="sans-serif" font-weight="bold" font-size="32px"
+    fill="url(#logoGrad)">SPT</text>
+</svg>
