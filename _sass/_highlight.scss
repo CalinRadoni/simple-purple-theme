@@ -5,6 +5,11 @@ pre.highlight { padding: calc(#{$spacing-unit} / 2) }
 // Generated with `rougify style github > _highlight.scss`
 // Modified based on https://github.com/primer/github-syntax-light
 
+pre.highlight {
+  padding: 1rem;
+  overflow: auto;
+}
+
 .highlight {
   background-color: #f6f8fa;
 
