@@ -57,4 +57,13 @@
     margin-top: 0.5rem;
     &:first-child { margin-top: 0 }
   }
+
+  &-20, &-25, &-33, &-50, &-67, &-75, &-80 { flex: 1 1 auto; align-items: stretch }
+  &-25 { width: 20% }
+  &-25 { width: 25% }
+  &-33 { width: 33% }
+  &-50 { width: 50% }
+  &-67 { width: 67% }
+  &-75 { width: 75% }
+  &-80 { width: 80% }
 }
