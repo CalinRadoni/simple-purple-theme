@@ -128,17 +128,20 @@ img.logo { width: 100px; height: 50px }
 }
 .row-limited {
   max-width: $media-w-extra;
-  margin: 0 auto;
+  margin-left: auto; margin-right: auto;
 }
-.row-full {
-  min-width: 100%;
-  margin: 1rem 0;
- }
- .row-limited-simple {
+.row-full { min-width: 100% }
+.row-limited-simple {
   padding: 0 1rem;
   max-width: $media-w-extra;
   width: 100%;
  }
+.margin-t1 { margin-top: 1rem }
+.margin-b1 { margin-bottom: 1rem }
+.margin-t2 { margin-top: 2rem }
+.margin-b2 { margin-bottom: 2rem }
+.padding-1 { padding: 1rem }
+.padding-2 { padding: 2rem }
 
 .svg-icon {
   position: relative; top: .125em; // Place the icon on the text baseline.
