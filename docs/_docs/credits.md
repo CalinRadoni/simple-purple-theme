@@ -15,3 +15,8 @@ I have learned a lot from:
 * [The Open Graph protocol](https://ogp.me/)
 
 Icons are from the [Icons - Material Design](https://material.io/resources/icons/?style=baseline) site.
+
+Social share icons are SVG objects from [fontawesome-free-5.13.0-web](https://fontawesome.com/) sprites.
+I have modified them to be able to apply the right brand colors (added white background and classes).
+I have take the modification path for size, because Font Awesome is huge and I needed only 6 icons, no `js`, no `css`.
+See Font Awesome's [free license](https://fontawesome.com/license/free).

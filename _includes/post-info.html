@@ -1,4 +1,5 @@
 <section class="page-info">
+<div class="page-info-left">
 {% if page.tags.size > 0 %}
   <p class="page-info-row">
   <span>Tag{%- if page.tags.size >= 1 -%}s{%- endif -%}:</span>
@@ -32,6 +33,10 @@
       {%- endif -%}
     {%- endif -%}
   </p>
+</div>
+<div class="page-info-right">
+{% include post-share.html %}
+</div>
 
 {% if site.post-prev-and-next %}
   {% include prev-next-post.html %}

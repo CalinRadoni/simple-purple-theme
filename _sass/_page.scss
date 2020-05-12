@@ -47,6 +47,15 @@
 
       a.next, a.prev { border: none; display: inline-block }
     }
+
+    &-left, &-right {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    &-right {
+      float: right;
+      line-height: 1em;
+    }
   }
 
   &-body {
@@ -97,4 +106,28 @@
   &-column {
     /* */
   }
+}
+
+.sharef { fill: #1877f2 }
+.sharet { fill: #1da1f2 }
+.sharer { fill: #ff4500 }
+.sharel { fill: #2867b2 }
+.sharew { fill: #25d366 }
+.sharem { fill: #808080 }
+
+.social {
+  &-share {
+    margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  &-link {
+    padding: 0; margin:0;
+    font-size: 32px;
+    display: block;
+    @include viewport-min-SM { display: inline-block }
+    @include viewport-min-M  { font-size: 40px }
+  }
+
+  &-icon { width: 1em; height: 1em }
 }
