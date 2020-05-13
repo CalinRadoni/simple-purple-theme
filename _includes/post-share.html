@@ -1,16 +1,29 @@
 {% include social-share.svg %}
 
+{%- assign eLink = page.url | absolute_url | url_encode -%}
+{%- if page.title -%}
+  {%- assign eText = page.title | url_encode -%}
+{%- else -%}
+  {%- assign eText = site.title | url_encode -%}
+{%- endif -%}
+
 <div class="social-share">
-  <a class="social-link" href="#">
+  <a class="social-link" target="_blank"
+      href="https://www.facebook.com/sharer/sharer.php?u={{ eLink }}">
     <svg class="social-icon" alt="Share on Facebook"><use xlink:href="#facebook-square" /></svg></a>
-  <a class="social-link" href="#">
+  <a class="social-link" target="_blank"
+      href="https://twitter.com/intent/tweet?url={{ eLink }}&text={{ eText }}">
     <svg class="social-icon" alt="Tweet"><use xlink:href="#twitter-square" /></svg></a>
-  <a class="social-link" href="#">
+  <a class="social-link" target="_blank"
+      href="https://reddit.com/submit?url={{ eLink }}&title={{ eText }}">
     <svg class="social-icon" alt="Share on Reddit"><use xlink:href="#reddit-square" /></svg></a>
-  <a class="social-link" href="#">
+  <a class="social-link" target="_blank"
+      href="https://www.linkedin.com/shareArticle?mini=true&url={{ eLink }}&title={{ eText }}">
     <svg class="social-icon" alt="Share on LinkedIn"><use xlink:href="#linkedin" /></svg></a>
-  <a class="social-link" href="#">
+  <a class="social-link" target="_blank"
+      href="whatsapp://send?text={{ eText }}%20{{ eLink }}">
     <svg class="social-icon" alt="Share on WhatsApp"><use xlink:href="#whatsapp-square" /></svg></a>
-  <a class="social-link" href="#">
+  <a class="social-link" target="_blank"
+      href="mailto:?subject={{ eText }}&body=Check%20{{ eLink }}">
     <svg class="social-icon" alt="Send email"><use xlink:href="#envelope-square" /></svg></a>
 </div>
