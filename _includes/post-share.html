@@ -1,3 +1,4 @@
+{%- if site.share-buttons.size > 0 -%}
 {% include social-share.svg %}
 
 {%- assign eLink = page.url | absolute_url | url_encode -%}
@@ -8,22 +9,37 @@
 {%- endif -%}
 
 <div class="social-share">
+  {%- for item in site.share-buttons -%}
+  {%- if item == "Facebook" -%}
   <a class="social-link" target="_blank"
       href="https://www.facebook.com/sharer/sharer.php?u={{ eLink }}">
     <svg class="social-icon" alt="Share on Facebook"><use xlink:href="#facebook-square" /></svg></a>
+  {%- endif -%}
+  {%- if item == "Twitter" -%}
   <a class="social-link" target="_blank"
       href="https://twitter.com/intent/tweet?url={{ eLink }}&text={{ eText }}">
     <svg class="social-icon" alt="Tweet"><use xlink:href="#twitter-square" /></svg></a>
+  {%- endif -%}
+  {%- if item == "Reddit" -%}
   <a class="social-link" target="_blank"
       href="https://reddit.com/submit?url={{ eLink }}&title={{ eText }}">
     <svg class="social-icon" alt="Share on Reddit"><use xlink:href="#reddit-square" /></svg></a>
+  {%- endif -%}
+  {%- if item == "LinkedIn" -%}
   <a class="social-link" target="_blank"
       href="https://www.linkedin.com/shareArticle?mini=true&url={{ eLink }}&title={{ eText }}">
     <svg class="social-icon" alt="Share on LinkedIn"><use xlink:href="#linkedin" /></svg></a>
+  {%- endif -%}
+  {%- if item == "WhatsApp" -%}
   <a class="social-link" target="_blank"
       href="whatsapp://send?text={{ eText }}%20{{ eLink }}">
     <svg class="social-icon" alt="Share on WhatsApp"><use xlink:href="#whatsapp-square" /></svg></a>
+  {%- endif -%}
+  {%- if item == "Email" -%}
   <a class="social-link" target="_blank"
       href="mailto:?subject={{ eText }}&body=Check%20{{ eLink }}">
     <svg class="social-icon" alt="Send email"><use xlink:href="#envelope-square" /></svg></a>
+  {%- endif -%}
+  {%- endfor -%}
 </div>
+{%- endif -%}

@@ -55,6 +55,7 @@
     &-right {
       float: right;
       line-height: 1em;
+      margin-left: 1rem;
     }
   }
 
@@ -103,9 +104,7 @@
     a.active-link { font-weight: bolder }
   }
 
-  &-column {
-    /* */
-  }
+  &-column { /* */ }
 }
 
 .sharef { fill: #1877f2 }
@@ -116,10 +115,7 @@
 .sharem { fill: #808080 }
 
 .social {
-  &-share {
-    margin-bottom: 0.5rem;
-    padding: 0 0.5rem;
-  }
+  &-share { /* */ }
 
   &-link {
     padding: 0; margin:0;

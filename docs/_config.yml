@@ -40,6 +40,14 @@ social-links:
   - site: LinkedIn
     link: https://www.linkedin.com/in/...
 
+share-buttons:
+  - Facebook
+  - Twitter
+  - Reddit
+  - LinkedIn
+  - WhatsApp
+  - Email
+
 post-excerpt-maxlen: 50
 post-date-in-preview: true
 post-desc-in-posts: true
