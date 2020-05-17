@@ -25,6 +25,9 @@ started !
 
 ## Theme settings
 
+`share-buttons` sets the number and the order of social share buttons.
+The supported values are: `Facebook`, `Twitter`, `Reddit`, `LinkedIn`, `WhatsApp` and `Email`.
+
 Leaving aside the obvious ones:
 
 - `post-excerpt-maxlen`: *number-of-words*, default value 50, used to limit the

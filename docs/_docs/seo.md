@@ -42,7 +42,8 @@ and built using the following code:
 
 ## SEO Image
 
-For image size the preferred sizes are:
+According to [Facebook's Images in Link Shares](https://developers.facebook.com/docs/sharing/webmasters/images),
+for image size the preferred sizes are:
 
 * 1200 x 630 px;
 * 600 x 315 px;
