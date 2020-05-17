@@ -130,6 +130,7 @@ img.logo { width: 100px; height: 50px }
   max-width: $media-w-extra;
   margin-left: auto; margin-right: auto;
 }
+.row-always { flex-direction: row }
 .row-full { min-width: 100% }
 .row-limited-simple {
   padding: 0 1rem;
@@ -192,6 +193,6 @@ code.language-plaintext {
 .back-green-color  { background-color: $green-color }
 .back-blue-color   { background-color: $blue-color }
 
-.border-footer-color      { border-color: $footer-color }
-.border-hover-color       { border-color: $hover-color }
-.border-grad-bottom-color { border-color: $grad-bottom-color }
+.border-footer-color      { border: 1px solid $footer-color }
+.border-hover-color       { border: 1px solid $hover-color }
+.border-grad-bottom-color { border: 1px solid $grad-bottom-color }
