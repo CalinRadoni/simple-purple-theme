@@ -66,85 +66,82 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
   </div>
 </section>
 
-<section class="row-full back-footer-color text-center" style="padding: 2rem 1rem;">
-  <div class="card">
-    <div class="card-title">
-      <h2>Here are some examples of cards</h2>
+<section class="row-full row-always text-center padding-2 back-footer-color">
+  <div class="card card-33">
+    <div class="card-body text-right">
+      <h2>About cards</h2>
     </div>
+  </div>
+  <div class="card card-67">
     <div class="card-body text-left">
       <p>The <code>card-body</code> is centered in the card and takes as much space as it needs, without overflowing.</p>
       <p>For card aligned content add the <code>stretched</code> class and one of <code>text-</code> classes.</p>
-      <p>See the source of this page for more info.</p>
+      <p>The <code>card-20</code> to <code>card-80</code> are stretched by default.</p>
     </div>
   </div>
 </section>
 
 <section class="row-limited">
-  <div class="card card-2 border-hover-color">
-    <div class="card-title">Title 1</div>
+  <div class="card card-f1 card-margin border-footer-color">
+    <div class="card-title">Example 1</div>
     <div class="card-body stretched text-right">
-      <p>flex 2 with border, stretched, right aligned</p>
+      <p>flex 1</p>
+      <p>border-footer</p>
+      <p>stretched</p>
+      <p>right aligned</p>
     </div>
   </div>
-  <div class="card card-3">
-    <div class="card-title">Title 2</div>
+  <div class="card card-f2 card-margin border-hover-color">
+    <div class="card-title">Example 2</div>
+    <div class="card-body stretched text-left">
+      <p>flex 2</p>
+      <p>border-hover</p>
+      <p>stretched</p>
+      <p>left aligned</p>
+    </div>
+  </div>
+  <div class="card card-f3 card-margin back-grad">
+    <div class="card-title">Example 3</div>
     <div class="card-body stretched text-center">
       <p>flex 3</p>
+      <p>back-grad</p>
       <p>stretched</p>
       <p>center aligned</p>
     </div>
   </div>
-  <div class="card card-3 border-hover-color">
-    <div class="card-title">Title 3</div>
-    <div class="card-body stretched text-left">
-      <p>flex 3 with border</p>
-      <p>stretched, left aligned</p>
+</section>
+
+<section class="row-limited row-always">
+  <div class="card card-60">
+    <div class="card-body text-right">
+      <p>A card can contain more cards.</p>
+      <p>The cards can have coloured background.</p>
+      <p>The cards can have the size specified in percents. To keep it, these cards are in a `row-always` flex parent.</p>
     </div>
   </div>
-  <div class="card border-hover-color">
-    <div class="card-title">Title 4</div>
-    <div class="card-body stretched text-center">
-      <p>flex 1 with border, stretched, center aligned</p>
+  <div class="card card-20 card-p0">
+    <div class="card-body text-left">
+      <div class="card back-red-color">    <div class="card-body"><p>back-red</p></div>    </div>
+      <div class="card back-yellow-color"> <div class="card-body"><p>back-yellow</p></div> </div>
+    </div>
+  </div>
+  <div class="card card-20 card-p0">
+    <div class="card-body text-left">
+      <div class="card back-blue-color">   <div class="card-body"><p>back-blue</p></div>   </div>
+      <div class="card back-green-color">  <div class="card-body"><p>back-green</p></div>  </div>
     </div>
   </div>
 </section>
 
-<section class="row-limited">
+<section class="row-full padding-2 text-center back-footer-color">
   <div class="card">
-    <div class="card-body"><p>background</p></div>
-  </div>
-  <div class="card back-footer-color">
-    <div class="card-body"><p>back-footer-color</p></div>
-  </div>
-  <div class="card back-hover-color">
-    <div class="card-body"><p>back-hover-color</p></div>
-  </div>
-  <div class="card back-grad">
-    <div class="card-body"><p>back-grad</p></div>
-  </div>
-</section>
-
-<section class="row-limited">
-  <div class="card back-red-color">
-    <div class="card-body"><p>back-red</p></div>
-  </div>
-  <div class="card back-yellow-color">
-    <div class="card-body"><p>back-yellow</p></div>
-  </div>
-  <div class="card back-blue-color">
-    <div class="card-body"><p>back-blue</p></div>
-  </div>
-  <div class="card back-green-color">
-    <div class="card-body"><p>back-green</p></div>
-  </div>
-</section>
-
-<section class="row-full back-footer-color text-center" style="padding: 2rem 1rem;">
-  <div class="card">
-    <div class="card-body stretched text-center">
-      <h2>Single-column layout for pages and posts</h2>
-      <h2>Two-column for docs</h2>
-      <h3>~ use the layouts as needed ~</h3>
+    <div class="card-body text-left">
+      <h2>Use the layouts as needed</h2>
+      <ul>
+      <li>Dedicated layout for pages, single-column</li>
+      <li>Dedicated layout for posts, single-column</li>
+      <li>Two-column layout for docs</li>
+      </ul>
     </div>
   </div>
 </section>
