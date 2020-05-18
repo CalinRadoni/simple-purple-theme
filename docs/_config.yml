@@ -108,6 +108,7 @@ defaults:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 # setting for jekyll-paginate
 # jekyll-paginate will produce pagination from /pages/index.html page
