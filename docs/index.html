@@ -61,22 +61,85 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     </div>
     <div class="card-body">
       <p>This theme was built for <a href="https://calinradoni.github.io/">calinradoni.github.io</a></p>
-      <p>See it there in action.</p>
+      <p>Will be applied there soon !</p>
+    </div>
+  </div>
+</section>
+
+<section class="row-full row-always padding-2 text-center back-footer-color">
+  <div class="card card-50">
+    <div class="card-body text-right">
+      <h2>Use the layouts as needed</h2>
+    </div>
+  </div>
+  <div class="card card-50">
+    <div class="card-body text-left">
+      <ul>
+      <li>Dedicated layout for pages, single-column</li>
+      <li>Dedicated layout for posts, single-column</li>
+      <li>Two-column layout for docs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="row-limited">
+  <div class="card card-f1">
+    <div class="card-title">
+      <h2>Pages</h2>
+    </div>
+    <div class="card-body">
+    <nav>
+      <ul>
+        <li><a href="{{ site.baseurl }}{% link pages/about.md %}">About</a></li>
+        <li><a href="{{ site.baseurl }}{% link pages/categories.html %}">Categories</a></li>
+        <li><a href="{{ site.baseurl }}{% link pages/tags.html %}">Tags</a></li>
+      </ul>
+    </nav>
+    </div>
+  </div>
+  <div class="card card-f2">
+    <div class="card-title">
+      <a href="{{ site.baseurl }}{% link pages/index.html %}"><h2>Posts</h2></a>
+    </div>
+    <div class="card-body stretched text-left">
+    <p> These are the newest posts:</p>
+    <nav>
+      <ul>
+        {%- for post in site.posts limit:5 -%}
+          <li>
+            {%- assign xTitle = post.title -%}
+            {%- if site.use-headline and post.headline -%}
+              {%- assign xTitle = post.headline | append: " ~ " | append: post.title -%}
+            {%- endif -%}
+            <a href="{{ post.url | relative_url }}">{{ xTitle }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+    </div>
+  </div>
+  <div class="card card-f2">
+    <div class="card-title">
+      <h2>Tag cloud</h2>
+    </div>
+    <div class="card-body">
+      {% include tag-cloud-number.html %}
     </div>
   </div>
 </section>
 
 <section class="row-full row-always text-center padding-2 back-footer-color">
-  <div class="card card-33">
-    <div class="card-body text-right">
-      <h2>About cards</h2>
-    </div>
-  </div>
   <div class="card card-67">
-    <div class="card-body text-left">
+    <div class="card-body text-right">
       <p>The <code>card-body</code> is centered in the card and takes as much space as it needs, without overflowing.</p>
       <p>For card aligned content add the <code>stretched</code> class and one of <code>text-</code> classes.</p>
       <p>The <code>card-20</code> to <code>card-80</code> are stretched by default.</p>
+    </div>
+  </div>
+  <div class="card card-33">
+    <div class="card-body text-left">
+      <h2>About cards</h2>
     </div>
   </div>
 </section>
@@ -129,53 +192,6 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     <div class="card-body text-left">
       <div class="card back-blue-color">   <div class="card-body"><p>back-blue</p></div>   </div>
       <div class="card back-green-color">  <div class="card-body"><p>back-green</p></div>  </div>
-    </div>
-  </div>
-</section>
-
-<section class="row-full padding-2 text-center back-footer-color">
-  <div class="card">
-    <div class="card-body text-left">
-      <h2>Use the layouts as needed</h2>
-      <ul>
-      <li>Dedicated layout for pages, single-column</li>
-      <li>Dedicated layout for posts, single-column</li>
-      <li>Two-column layout for docs</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="row-limited">
-  <div class="card">
-    <div class="card-body">
-    <h2>Pages</h2>
-    <nav>
-      <ul>
-        <li><a href="{{ site.baseurl }}{% link pages/about.md %}">About</a></li>
-        <li><a href="{{ site.baseurl }}{% link pages/categories.html %}">Categories</a></li>
-        <li><a href="{{ site.baseurl }}{% link pages/tags.html %}">Tags</a></li>
-      </ul>
-    </nav>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body stretched text-left">
-    <a href="{{ site.baseurl }}{% link pages/index.html %}"><h2>Posts</h2></a>
-    <p> These are the newest posts:</p>
-    <nav>
-      <ul>
-        {%- for post in site.posts limit:5 -%}
-          <li>
-            {%- assign xTitle = post.title -%}
-            {%- if site.use-headline and post.headline -%}
-              {%- assign xTitle = post.headline | append: " ~ " | append: post.title -%}
-            {%- endif -%}
-            <a href="{{ post.url | relative_url }}">{{ xTitle }}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </nav>
     </div>
   </div>
 </section>
