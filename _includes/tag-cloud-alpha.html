@@ -1,0 +1,19 @@
+{%- capture ts -%}
+{%- for item in site.tags -%}
+{%- assign str = "@@@@" | append: item[1].size | append: "@@@@" | append: item[0] -%}
+{%- if forloop.last == false -%}
+{%- assign str = str | append: "@@@@@" -%}
+{%- endif -%}
+{{ item[0] | downcase | append: str }}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign arr = ts | split: "@@@@@" -%}
+{%- assign ars = arr | sort -%}
+<ul class="tag-cloud">
+{%- for item in ars -%}
+    {%- assign arr = item | split: "@@@@" -%}
+    {%- assign taglinkname = arr[2] | slugify: "ascii" -%}
+    {%- capture taglink -%}{{ site.baseurl }}{% link pages/tags.html %}#{{ taglinkname }}{%- endcapture -%}
+    <li><a href="{{ taglink }}">{{ arr[2] }} ({{ arr[1] }})</a></li>
+{%- endfor -%}
+</ul>
