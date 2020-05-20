@@ -33,7 +33,7 @@ permalink:
         {{ post.content | split:'<!--more-->' | first | markdownify | strip_html }}
       {%- else -%}
         {% assign max-len = site.post-excerpt-maxlen | default: 50 %}
-        {{ post.content | markdownify | strip_html | truncatewords: max-len }}
+        {{ post.content | markdownify | strip_html | strip_newlines | truncatewords: max-len }}
       {%- endif -%}
     {%- endif -%}
   </p>
