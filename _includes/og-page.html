@@ -8,13 +8,8 @@
 {%- if page.image-h -%}<meta property="og:image:height" content="{{ page.image-h }}" />{%- endif -%}
 {% endif %}
 {{ }}
-{%- if page.name == "index.html" -%}
-  <meta property="og:description" content="{{ site.description }}" />
-{%- else -%}
 {%- if page.description -%}
   <meta property="og:description" content="{{ page.description }}" />
 {%- endif -%}
-{%- endif -%}
 {{ }}
 <meta property="og:site_name" content="{{ site.title }}" />
-
