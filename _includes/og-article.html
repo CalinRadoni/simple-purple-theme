@@ -1,20 +1,18 @@
 {%- if page.description -%}
   {%- assign xDesc = page.description -%}
 {%- else -%}
-  {%- if post.content contains '<!--more-->' -%}
-    {%- assign xDesc = page.content | split: '<!--more-->' | first | markdownify | strip_html -%}
+  {%- if page.content contains '<!--more-->' -%}
+    {%- assign xDesc = page.content | split: '<!--more-->' | first | markdownify | strip_html | strip_newlines -%}
   {%- else -%}
-    {% assign max-len = site.post-excerpt-maxlen | default: 50 %}
+    {%- assign max-len = site.post-excerpt-maxlen | default: 50 -%}
     {%- assign xDesc = page.content | markdownify | strip_html | strip_newlines | truncatewords: max-len -%}
   {%- endif -%}
 {%- endif -%}
-
 {%- if site.use-headline -%}
   {%- if page.headline -%}
     {%- assign xDesc = page.headline | append: " " | append: xDesc -%}
   {%- endif -%}
 {%- endif -%}
-
 {%- assign xDesc = xDesc | truncate: 160 -%}
 
 <meta property="og:title"       content="{{ page.title }}" />

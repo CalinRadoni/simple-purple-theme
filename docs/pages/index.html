@@ -30,9 +30,9 @@ permalink:
       {{ post.description }}
     {%- else -%}
       {%- if post.content contains '<!--more-->' -%}
-        {{ post.content | split:'<!--more-->' | first | markdownify | strip_html }}
+        {{ post.content | split:'<!--more-->' | first | markdownify | strip_html | strip_newlines }}
       {%- else -%}
-        {% assign max-len = site.post-excerpt-maxlen | default: 50 %}
+        {%- assign max-len = site.post-excerpt-maxlen | default: 50 -%}
         {{ post.content | markdownify | strip_html | strip_newlines | truncatewords: max-len }}
       {%- endif -%}
     {%- endif -%}
