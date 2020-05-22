@@ -3,7 +3,7 @@
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": "{{ include.name }}",
-  {% if include.image %}"image": [ "{{ include.image }}" ],{%- endif -%}
+  "image": "{{ include.image | absolute_url }}",
   "description": "{{ include.description }}",
   {% if include.mpn %}"mpn": "{{ include.mpn }}",{%- endif -%}
   {% if include.sku %}"sku": "{{ include.sku }}",{%- endif -%}
@@ -11,6 +11,14 @@
     "@type": "Brand",
     "name": "{{ include.brand }}"
   },
-  "url": "{{ include.url }}"
+  "url": "{{ include.url }}",
+  "offers": {
+    "@type": "Offer",
+    {% if include.offer-url %}"url": "{{ include.offer-url }}",{%- endif -%}
+    {% if include.offer-priceValidUntil %}"priceValidUntil": "{{ include.offer-priceValidUntil }}",{%- endif -%}
+    "availability": {% if include.offer-availability %}"{{ include.offer-availability }}"{% else %}"LimitedAvailability"{% endif %},
+    "price": {% if include.offer-price %}"{{ include.offer-price }}"{% else %}"1000"{% endif %},
+    "priceCurrency": {% if include.offer-currency %}"{{ include.offer-currency }}"{% else %}"BTC"{% endif %}
+  }
 }
 </script>
