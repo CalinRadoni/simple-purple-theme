@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ include.name }}",
+  "url": "{{ include.url }}",
+  {% if include.jobTitle %}"jobTitle": "{{ include.jobTitle }}",{% endif %}
+  {% if include.alumniOf %}"alumniOf": "{{ include.alumniOf }}",{% endif %}
+  {% if include.gender %}"gender": "{{ include.gender }}",{% endif %}
+  {% if include.sameAs %}"sameAs": [ {{ include.sameAs }} ],{% endif %}
+  "image": "{{ include.image | absolute_url }}"
+}
+</script>
