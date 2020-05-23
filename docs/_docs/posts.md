@@ -1,6 +1,6 @@
 ---
 date: 2020-04-11
-date-modified: 2020-05-03
+date-modified: 2020-05-21
 ---
 
 # Posts
@@ -62,6 +62,9 @@ If the option `use-headline` is `false` the `headline` variable is ignored globa
 
 The image is used in SEO. Options (with notes from [A Guide to Sharing for Webmasters](https://developers.facebook.com/docs/sharing/webmasters) and [The Open Graph protocol - Structured Properties](https://ogp.me/#structured)) are:
 
+- for Open Graph the properties used, if defined, are: `image`, and `image-d`, `image-w` and `image-h`;
+- for LD-JSON, `images` if defined, `image` otherwise.
+
 - `image` is the URL of the image associated with this post. The image type can
   be one of `image/jpeg`, `image/gif` or `image/png`;
 - `image-d` is a description of what is in the image (not a caption). If the
@@ -69,6 +72,35 @@ The image is used in SEO. Options (with notes from [A Guide to Sharing for Webma
 - `image-w` and `image-h` are the width and height of image in pixels. Specify
   width and height for your image to ensure that the image loads properly the
   first time it's shared.
+
+Use `images` property, see below for Google's recommendation, like this:
+
+```yaml
+images:
+  - /assets/images/post-name-img-1x1.png
+  - /assets/images/post-name-img-3x4.png
+  - /assets/images/post-name-img-16x9.png
+```
+
+Google recommends for [Articles](https://developers.google.com/search/docs/data-types/article) an image with:
+
+- type `.jpg`, `.png`, or `.gif`;
+- minimum width of 1200px;
+- for best results, multiple high-resolution images (minimum of 800,000 pixels
+  when multiplying width and height) with the following aspect ratios: `16x9`, `4x3`, and `1x1`.
+
+the minimum sizes are:
+
+- 1200 x 1200 px;
+- 1200 x 900 px;
+- 1200 x 675 px.
+
+According to [Facebook's Images in Link Shares](https://developers.facebook.com/docs/sharing/webmasters/images),
+for image size the preferred sizes are:
+
+- 1200 x 630 px;
+- 600 x 315 px;
+- at least, keep the 1.91:1 aspect ratio.
 
 See also the [SEO]({{ site.baseurl }}{% link _docs/seo.md %}) document.
 
