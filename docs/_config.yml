@@ -24,6 +24,7 @@ remote_theme: "CalinRadoni/simple-purple-theme"
 skin: purple
 # skin: blue
 
+home-logo: /assets/img/logo.svg
 header-links:
   - name: "Quick Start"
     url: /docs/quick-start
