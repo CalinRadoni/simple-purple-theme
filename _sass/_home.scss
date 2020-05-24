@@ -45,6 +45,6 @@
     }
   }
 
-  &-svg-ff { fill: $footer-color; fill-opacity: 1; stroke: $color-on-back; stroke-width: 1px }
-  &-svg-fh { fill: $hover-color;  fill-opacity: 1; stroke: $color-on-back; stroke-width: 1px }
+  &-svg-ff { fill: $footer-color; fill-opacity: 1; stroke: $hover-color; stroke-width: 5px }
+  &-svg-fh { fill: $hover-color;  fill-opacity: 1; stroke: $color-back; stroke-width: 5px }
 }
