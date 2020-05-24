@@ -25,15 +25,14 @@
   },
   "headline": "{{ page.title }}",
   "description": "{{ xDesc }}",
-  {%- if page.images -%}{{ }}
+  {%- if page.images %}
   "image": [ {% for imglink in page.images %}
     "{{ imglink | absolute_url }}"{%- if forloop.last == false -%},{%- endif -%}
   {% endfor %}
   ],
   {% else %}
   "image": "{{ page.image | absolute_url }}",
-  {{ }}
-  {%- endif -%}
+  {% endif -%}
   {% if page.date %}"datePublished": "{{ page.date }}",{% endif %}
   {% if page.date-modified %}"dateModified": "{{ page.date-modified | date: %F}}",{% endif %}
   "author": {
@@ -41,12 +40,18 @@
     "name": "{% if page.author %}{{ page.author }}{% else %}{{ site.author-name }}{% endif %}"
   },
   "publisher": {
+  {%- if site.publisher.first.person %}
+    "@type": "Person",
+    "name": "{{ site.publisher.first.name }}",
+    "url": "{{ site.publisher.first.url }}"
+  {%- else %}
     "@type": "Organization",
-    "name": "{{ site.title }}",
+    "name": "{{ site.publisher.first.name }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.logo | absolute_url }}"
+      "url": "{{ site.publisher.first.logo-url | absolute_url }}"
     }
+  {%- endif %}
   }
 }
 </script>

@@ -49,6 +49,14 @@ share-buttons:
   - WhatsApp
   - Email
 
+publisher:
+  - person: true
+    name: "Calin Radoni"
+    url: https://github.com/CalinRadoni
+#  - person: false
+#    name: "the Company Name"
+#    logo-url: /assets/img/company-logo.png
+
 post-excerpt-maxlen: 50
 post-date-in-preview: true
 post-desc-in-posts: true

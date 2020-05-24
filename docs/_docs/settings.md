@@ -15,7 +15,7 @@ started !
 ## Site settings
 
 - `title` and `description` are used for SEO and should also be used in the main page;
-- `logo` is used in the site's header menu;
+- `logo` is used in SEO records;
 
 - `baseurl` should be used if the site if served from a subpath (**this is the case of GitHub Pages for Projects**):
   - if the site if served from `example.com/zzz` use `baseurl: /zzz`;
@@ -25,8 +25,32 @@ started !
 
 ## Theme settings
 
+### share-buttons
+
 `share-buttons` sets the number and the order of social share buttons.
 The supported values are: `Facebook`, `Twitter`, `Reddit`, `LinkedIn`, `WhatsApp` and `Email`.
+
+### publisher
+
+If the publisher is a person use:
+
+```yml
+publisher:
+  - person: true
+    name: "Calin Radoni"
+    url: https://github.com/CalinRadoni
+```
+
+If the publisher is an organization use:
+
+```yml
+publisher:
+  - person: false
+    name: "the Company Name"
+    logo-url: /assets/img/company-logo.png
+```
+
+### Post formatting
 
 Leaving aside the obvious ones:
 
