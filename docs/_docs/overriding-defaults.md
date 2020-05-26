@@ -15,14 +15,28 @@ defaults for any requested file in the following folders:
 - `/_includes`
 - `/_sass`
 
+### Layouts and includes
+
 To replace layouts or includes in your theme, make a copy in your `_layouts` or
-`_includes` directory of the specific file you wish to modify.
+`_includes` directory of the specific file you wish to modify and change it.
+
+### Assets
 
 To replace any file from theme's `assets`, make a copy in your `assets`
-directory of the specific file you wish to modify.
+directory of the specific file you wish to modify and change it.
 
-To modify any stylesheet you must take the extra step of also copying the main
-sass file, `_sass/base.scss` into the `_sass` directory in your site’s source.
+### Stylesheets
+
+**Note**: To add or modify any stylesheet  you **must** copy the main sass file,
+`_sass/styles.scss` into the `_sass`  directory in your site’s source.
+
+To replace any stylesheet in your theme, make a copy in your `_sass` directory
+of the specific file you wish to modify and change it.
+
+To add your own styles copy the file `user.scss` in your `_sass` directory and
+change it.
+
+### more information
 
 See [Jekyll's Overriding theme defaults](https://jekyllrb.com/docs/themes/) page
 for more information.
