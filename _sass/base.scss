@@ -13,13 +13,13 @@ $page-body-width:    992px;
 $page-sidebar-minw:  200px;
 $page-sidebar-maxw:  400px;
 
-/* --- */
+// functions
 
 @function strip-unit($val) {
   @return $val / ($val - $val + 1);
 }
 
-/* --- */
+// media
 
 $media-w-small:  576px;
 $media-w-medium: 768px;
@@ -31,10 +31,12 @@ $media-w-extra:  1200px;
 @mixin viewport-min-L  { @media (min-width: $media-w-large)  { @content; } }
 @mixin viewport-min-XL { @media (min-width: $media-w-extra)  { @content; } }
 
-/* --- */
+// typography
 
 $font-size-small: 16px;
 $font-size-extra: 18px;
+
+// settings
 
 * { box-sizing: border-box }
 
@@ -136,13 +138,7 @@ img.logo { width: 100px; height: 50px }
   padding: 0 1rem;
   max-width: $media-w-extra;
   width: 100%;
- }
-.margin-t1 { margin-top: 1rem }
-.margin-b1 { margin-bottom: 1rem }
-.margin-t2 { margin-top: 2rem }
-.margin-b2 { margin-bottom: 2rem }
-.padding-1 { padding: 1rem }
-.padding-2 { padding: 2rem }
+}
 
 .svg-icon {
   position: relative; top: .125em; // Place the icon on the text baseline.
@@ -159,6 +155,7 @@ code.language-plaintext {
 }
 
 // layouts
+
 @import '_home';
 @import '_page';
 @import '_footer';
@@ -171,9 +168,18 @@ code.language-plaintext {
 @import '_buttons.scss';
 
 // syntax highlighting
+
 @import '_highlight';
 
-// these are moved here to give them higher precedence then the ones above
+// the next settings are moved here to give them higher precedence then the ones above
+
+.margin-t1 { margin-top: 1rem }
+.margin-b1 { margin-bottom: 1rem }
+.margin-t2 { margin-top: 2rem }
+.margin-b2 { margin-bottom: 2rem }
+
+.padding-1 { padding: 1rem }
+.padding-2 { padding: 2rem }
 
 .stretched   { align-self: stretch }
 .text-left   { text-align: left   }
