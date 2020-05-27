@@ -4,7 +4,7 @@
 
 title: "simple-purple-theme"
 description: "Responsive, Fluid typography, SEO for Google Search, Jekyll theme for GitHub Pages"
-logo: /assets/img/logo.svg
+logo: /assets/img/logo.png
 
 # this site is published in GitHub Pages under the "simple-purple-theme" path
 baseurl: /demo
@@ -24,7 +24,10 @@ remote_theme: "CalinRadoni/simple-purple-theme"
 skin: purple
 # skin: blue
 
+home-logo: /assets/img/logo.svg
 header-links:
+  - name: "Quick Start"
+    url: /docs/quick-start
   - name: "Posts"
     url: /pages/
   - name: "About"
@@ -37,6 +40,22 @@ social-links:
     link: https://github.com/CalinRadoni
   - site: LinkedIn
     link: https://www.linkedin.com/in/...
+
+share-buttons:
+  - Facebook
+  - Twitter
+  - Reddit
+  - LinkedIn
+  - WhatsApp
+  - Email
+
+publisher:
+  - person: true
+    name: "Calin Radoni"
+    url: https://github.com/CalinRadoni
+#  - person: false
+#    name: "the Company Name"
+#    logo-url: /assets/img/company-logo.png
 
 post-excerpt-maxlen: 50
 post-date-in-preview: true
@@ -98,6 +117,7 @@ defaults:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 # setting for jekyll-paginate
 # jekyll-paginate will produce pagination from /pages/index.html page
