@@ -2,7 +2,7 @@ os: linux
 dist: xenial
 language: ruby
 rvm:
-  - 2.5
+  - 2.7
 
 before_install:
   - yes | gem update --system --force --no-document
