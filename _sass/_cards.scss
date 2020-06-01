@@ -31,13 +31,17 @@
 
   &-title {
     align-self: stretch;
-    flex: 0 0 45%;
+    flex: 0;
     text-align: right;  margin: 0 1rem 0 0;
     @include viewport-min-M {
       flex: 0 0 auto;
       text-align: center; margin: 0 0 0.5rem 0;
     }
   }
+  &-title-30 { flex: 0 0 30% }
+  &-title-45 { flex: 0 0 45% }
+  &-title { @include viewport-min-M { flex: 0 0 auto } }
+
   &-title-simple {
     align-self: stretch;
     flex: 0 0 auto;
