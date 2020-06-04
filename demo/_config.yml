@@ -2,11 +2,13 @@
 # Site settings
 # ------------------------------------------------------------------------------
 
-title: "simple-purple-theme"
+title: "simple-purple-theme demo"
 description: "Responsive, Fluid typography, SEO for Google Search, Jekyll theme for GitHub Pages"
 logo: /assets/img/logo.png
 
-# this site is published in GitHub Pages under the "simple-purple-theme" path
+# this demo site is published under the "/demo" path. It is useful for GitHub Pages
+# that are not published under the root path.
+# if published under the root path, comment the next line
 baseurl: /demo
 
 # ------------------------------------------------------------------------------
@@ -26,8 +28,6 @@ skin: purple
 
 home-logo: /assets/img/logo.svg
 header-links:
-  - name: "Quick Start"
-    url: /docs/quick-start
   - name: "Posts"
     url: /pages/
   - name: "About"
