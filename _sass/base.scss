@@ -201,6 +201,15 @@ code.language-plaintext {
 .text-center { text-align: center }
 .text-right  { text-align: right  }
 
+.text-left-right {
+  text-align: left;
+  @include viewport-min-M { text-align: right; }
+}
+.text-left-right {
+  text-align: center;
+  @include viewport-min-M { text-align: right; }
+}
+
 .back-grad {
   background-image: linear-gradient($grad-top-color, $grad-bottom-color);
 }
