@@ -114,7 +114,6 @@ img.logo {
   display: block;
 }
 
-
 .row-vh {
   display: flex; flex-direction: column; align-items: stretch; justify-content: center;
   padding: 0;
@@ -205,7 +204,7 @@ code.language-plaintext {
   text-align: left;
   @include viewport-min-M { text-align: right; }
 }
-.text-left-right {
+.text-center-right {
   text-align: center;
   @include viewport-min-M { text-align: right; }
 }
@@ -218,14 +217,11 @@ code.language-plaintext {
 .back-hover-color       { background-color: $hover-color }
 .back-grad-bottom-color { background-color: $grad-bottom-color }
 
-.back-color-footer-back {
-  background-color: $footer-color;
-  @include viewport-min-M { background-color: $color-back; }
-}
-.back-color-back-footer {
-  background-color: $color-back;
-  @include viewport-min-M { background-color: $footer-color; }
-}
+.back-color             { background-color: $color-back; }
+.back-color-footer-back { background-color: $footer-color; @include viewport-min-M { background-color: $color-back; } }
+.back-color-back-footer { background-color: $color-back;   @include viewport-min-M { background-color: $footer-color; } }
+.back-color-hover-back  { background-color: $hover-color;  @include viewport-min-M { background-color: $color-back; } }
+.back-color-back-hover  { background-color: $color-back;   @include viewport-min-M { background-color: $hover-color; } }
 
 .back-red-color    { background-color: $red-color }
 .back-yellow-color { background-color: $yellow-color }
