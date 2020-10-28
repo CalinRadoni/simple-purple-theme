@@ -114,6 +114,18 @@ img.logo {
   display: block;
 }
 
+
+.row-vh {
+  display: flex; flex-direction: column; align-items: stretch; justify-content: center;
+  padding: 0;
+  width: 100%; min-width: 100%;
+  text-align: center;
+  @include viewport-min-M {
+    flex-direction: row; flex-wrap: nowrap;
+    padding: 1rem;
+  }
+}
+
 .row-flex-row {
   display: flex; flex-direction: row; flex-wrap: wrap; align-items: stretch; justify-content: center;
   padding: 0.5rem;
@@ -196,6 +208,15 @@ code.language-plaintext {
 .back-footer-color      { background-color: $footer-color }
 .back-hover-color       { background-color: $hover-color }
 .back-grad-bottom-color { background-color: $grad-bottom-color }
+
+.back-color-footer-back {
+  background-color: $footer-color;
+  @include viewport-min-M { background-color: $color-back; }
+}
+.back-color-back-footer {
+  background-color: $color-back;
+  @include viewport-min-M { background-color: $footer-color; }
+}
 
 .back-red-color    { background-color: $red-color }
 .back-yellow-color { background-color: $yellow-color }
