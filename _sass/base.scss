@@ -124,11 +124,6 @@ img.logo {
     padding: 1rem;
   }
 }
-.limited-width {
-  min-width: unset;
-  max-width: $media-w-extra;
-  margin-left: auto; margin-right: auto;
-}
 .row {
   display: flex; flex-direction: row; align-items: stretch; justify-content: center;
   padding: 0;
@@ -139,6 +134,11 @@ img.logo {
   padding: 0;
   width: 100%; min-width: 100%;
   text-align: center;
+}
+.limited-width {
+  min-width: unset;
+  max-width: $media-w-extra;
+  margin-left: auto; margin-right: auto;
 }
 
 .svg-icon {
