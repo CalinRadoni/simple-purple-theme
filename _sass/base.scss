@@ -125,6 +125,7 @@ img.logo {
   }
 }
 .limited-width {
+  min-width: unset;
   max-width: $media-w-extra;
   margin-left: auto; margin-right: auto;
 }
