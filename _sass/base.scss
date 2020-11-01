@@ -118,7 +118,6 @@ img.logo {
   display: flex; flex-direction: column; align-items: stretch; justify-content: center;
   padding: 0;
   width: 100%; min-width: 100%;
-  text-align: center;
   @include viewport-min-M {
     flex-direction: row; flex-wrap: nowrap;
     padding: 1rem;
@@ -128,12 +127,10 @@ img.logo {
   display: flex; flex-direction: row; align-items: stretch; justify-content: center;
   padding: 0;
   width: 100%; min-width: 100%;
-  text-align: center;
 }
 .row-no-flex {
   padding: 0;
   width: 100%; min-width: 100%;
-  text-align: center;
 }
 .limited-width {
   min-width: unset;
