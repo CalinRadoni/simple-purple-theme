@@ -46,13 +46,13 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     </div>
     <div class="card-body">
       <p class="card-row">
-        <span class="card-box-1" style="background-color: #a300a3">&nbsp;</span>
-        <span class="card-box-1" style="background-color: #800080">&nbsp;</span>
+        <span style="width: 1em; float: left; background-color: #a300a3;">&nbsp;</span>
+        <span style="width: 1em; float: left; background-color: #800080;">&nbsp;</span>
         Purples
       </p>
-      <p class="card-row"><span class="card-box-2" style="background-color: #0f4c81">&nbsp;</span>Classic Blue</p>
-      <p class="card-row"><span class="card-box-2" style="background-color: #FF6F61">&nbsp;</span>Living Coral</p>
-      <p class="card-row"><span class="card-box-2" style="background-color: #88B04B">&nbsp;</span>Greenery</p>
+      <p class="card-row"><span style="width: 2em; float: left; background-color: #0f4c81;">&nbsp;</span>Classic Blue</p>
+      <p class="card-row"><span style="width: 2em; float: left; background-color: #FF6F61;">&nbsp;</span>Living Coral</p>
+      <p class="card-row"><span style="width: 2em; float: left; background-color: #88B04B;">&nbsp;</span>Greenery</p>
     </div>
   </div>
   <div class="card card-margin1 text-center">
@@ -67,12 +67,12 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
 </section>
 
 <section class="row padding-2 back-footer-color">
-  <div class="card card-50 padding-1">
+  <div class="card flex-w50 padding-1">
     <div class="card-body text-right">
       <h2>Use the layouts as needed</h2>
     </div>
   </div>
-  <div class="card card-50 padding-1">
+  <div class="card flex-w50 padding-1">
     <div class="card-body text-left">
       <ul>
       <li>Dedicated layout for pages, single-column</li>
@@ -84,7 +84,7 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
 </section>
 
 <section class="row-vh limited-width">
-  <div class="card card-M20 padding-1">
+  <div class="card flex-wM20 padding-1">
     <div class="card-title">
       <h2>Pages</h2>
     </div>
@@ -98,7 +98,7 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     </nav>
     </div>
   </div>
-  <div class="card card-M40 padding-1">
+  <div class="card flex-wM40 padding-1">
     <div class="card-title">
       <a href="{{ site.baseurl }}{% link pages/index.html %}"><h2>Posts</h2></a>
     </div>
@@ -119,7 +119,7 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     </nav>
     </div>
   </div>
-  <div class="card card-M40 padding-1">
+  <div class="card flex-wM40 padding-1">
     <div class="card-title">
       <h2>Tag cloud</h2>
     </div>
@@ -130,14 +130,13 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
 </section>
 
 <section class="row limited-width padding-2 back-footer-color">
-  <div class="card card-75 padding-1">
+  <div class="card flex-w75 padding-1">
     <div class="card-body text-right">
       <p>The <code>card-body</code> is centered in the card and takes as much space as it needs, without overflowing.</p>
       <p>For card aligned content add the <code>stretched</code> class and one of <code>text-</code> classes.</p>
-      <p>The <code>card-20</code> to <code>card-80</code> are stretched by default.</p>
     </div>
   </div>
-  <div class="card card-25 padding-1">
+  <div class="card flex-w25 padding-1">
     <div class="card-body text-left">
       <h2>About cards</h2>
     </div>
@@ -145,12 +144,12 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
 </section>
 
 <section class="row-vh limited-width">
-  <div class="card card-M25 padding-1 back-color-footer-back">
+  <div class="card flex-wM25 padding-1 back-color-footer-back">
     <div class="card-body text-left-right stretched">
       <h2>Another card layout</h2>
     </div>
   </div>
-  <div class="card card-M75 padding-1">
+  <div class="card flex-wM75 padding-1">
     <div class="card-body text-left stretched">
       <p>The cards are arranged by column on small screens.</p>
       <p><code>text-left-right</code> means left aligned on small screens and right aligned otherwise.</p>
@@ -160,12 +159,12 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
 </section>
 
 <section class="row-vh limited-width back-hover-color text-center">
-  <div class="card card-M25 padding-1">
+  <div class="card flex-wM25 padding-1">
     <div class="card-body text-center-right stretched">
       <h2>and with changed colors</h2>
     </div>
   </div>
-  <div class="card card-M75 padding-1 back-color-back-hover">
+  <div class="card flex-wM75 padding-1 back-color-back-hover">
     <div class="card-body text-left stretched">
       <p>The cards are arranged by column on small screens.</p>
       <p><code>text-center-right</code> means center aligned on small screens and right aligned otherwise.</p>
@@ -176,7 +175,7 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
 
 <section class="row-vh limited-width">
   <div class="card card-margin1 padding-1 border-footer-color">
-    <div class="card-title card-title-45">Example 1</div>
+    <div class="card-title flex-wM50">Example 1</div>
     <div class="card-body stretched text-right">
       <p>border-footer</p>
       <p>stretched</p>
@@ -184,7 +183,7 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     </div>
   </div>
   <div class="card card-margin1 padding-1 border-hover-color">
-    <div class="card-title card-title-30">Example 2</div>
+    <div class="card-title flex-wM30">Example 2</div>
     <div class="card-body stretched text-left">
       <p>border-hover</p>
       <p>stretched</p>
@@ -202,7 +201,7 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
 </section>
 
 <section class="row limited-width">
-  <div class="card card-60 padding-1">
+  <div class="card flex-w60 padding-1">
     <div class="card-body text-right">
       <p>A card can contain more cards.</p>
       <p>The cards can have coloured background.</p>
@@ -210,11 +209,11 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
       <p>The M<i>percent</i> classes (card-M20, card-M25, ...) will change their width to 100% on small screens.</p>
     </div>
   </div>
-  <div class="card card-20">
+  <div class="card flex-w20">
     <div class="card back-red-color">    <div class="card-body"><p>back-red</p></div>    </div>
     <div class="card back-yellow-color"> <div class="card-body"><p>back-yellow</p></div> </div>
   </div>
-  <div class="card card-20">
+  <div class="card flex-w20">
     <div class="card back-blue-color">   <div class="card-body"><p>back-blue</p></div>   </div>
     <div class="card back-green-color">  <div class="card-body"><p>back-green</p></div>  </div>
   </div>
