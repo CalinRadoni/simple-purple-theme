@@ -137,6 +137,14 @@ img.logo {
   max-width: $media-w-extra;
   margin-left: auto; margin-right: auto;
 }
+.spaced-1 {
+  margin-right: 0.5rem;
+  &:last-child { margin-right: 0 }
+}
+.spaced-2 {
+  margin-right: 1rem;
+  &:last-child { margin-right: 0 }
+}
 
 .svg-icon {
   position: relative; top: .125em; // Place the icon on the text baseline.
