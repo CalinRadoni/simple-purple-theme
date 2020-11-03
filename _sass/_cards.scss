@@ -8,15 +8,6 @@
   align-items: center;
   justify-content: flex-start;
 
-  .margin1 {
-    margin: 1rem 0 0 0;
-    &:first-child { margin-top: 0 }
-  }
-  .margin2 {
-    margin: 2rem 0 0 0;
-    &:first-child { margin-top: 0 }
-  }
-
   .title {
     align-self: stretch;
     flex: 0; // 0 means 0 1 0%
@@ -39,23 +30,6 @@
   justify-content: flex-start;
   @include viewport-min-M {
     flex-direction: column;
-  }
-
-  .margin1 {
-    margin: 1rem 0 0 0;
-    &:first-child { margin-top: 0 }
-    @include viewport-min-M {
-      margin: 0 0 0 1rem;
-      &:first-child { margin-left: 0 }
-    }
-  }
-  .margin2 {
-    margin: 2rem 0 0 0;
-    &:first-child { margin-top: 0 }
-    @include viewport-min-M {
-      margin: 0 0 0 2rem;
-      &:first-child { margin-left: 0 }
-    }
   }
 
   .title {
@@ -88,6 +62,31 @@
 .card-title-img-100 {
   width: 100%;
   display: block;
+}
+
+.card-m1 {
+  margin: 1rem 0 0 0;
+  &:first-child { margin-top: 0 }
+}
+.card-m2 {
+  margin: 2rem 0 0 0;
+  &:first-child { margin-top: 0 }
+}
+.card-m1vh {
+  margin: 1rem 0 0 0;
+  &:first-child { margin-top: 0 }
+  @include viewport-min-M {
+    margin: 0 0 0 1rem;
+    &:first-child { margin-left: 0 }
+  }
+}
+.card-m2vh {
+  margin: 2rem 0 0 0;
+  &:first-child { margin-top: 0 }
+  @include viewport-min-M {
+    margin: 0 0 0 2rem;
+    &:first-child { margin-left: 0 }
+  }
 }
 
 .flex-w20 { flex: 0 0 19.999% } .flex-w25 { flex: 0 0 24.999% } .flex-w33 { flex: 0 0 33.333% }
