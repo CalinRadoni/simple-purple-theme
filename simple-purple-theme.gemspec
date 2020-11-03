@@ -15,8 +15,8 @@ Gem::Specification.new do |spec|
   end
 
   # version are taken from https://pages.github.com/versions/
-  # and were valid for github-pages version 204
-  spec.add_runtime_dependency "jekyll", "~> 3.8"
+  # and were valid for github-pages version 209
+  spec.add_runtime_dependency "jekyll", "~> 3.9"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
   spec.add_runtime_dependency "jekyll-remote-theme",  "~> 0.4"
