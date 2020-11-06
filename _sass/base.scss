@@ -120,7 +120,6 @@ img.logo {
   width: 100%; min-width: 100%;
   @include viewport-min-M {
     flex-direction: row; flex-wrap: nowrap;
-    padding: 1rem;
   }
 }
 .row {
@@ -185,7 +184,9 @@ code.language-plaintext {
 .margin-b2 { margin-bottom: 2rem }
 
 .padding-1 { padding: 1rem }
+.padding-1h { padding: 0 1rem }
 .padding-2 { padding: 2rem }
+.padding-2h { padding: 0 2rem }
 
 .stretched   { align-self: stretch }
 .text-left   { text-align: left   }
