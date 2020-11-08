@@ -170,25 +170,35 @@ a.block {
   &:hover { color: $link-color;}
 }
 
+/*
 a.block1, a.block1d, a.block2, a.block2d {
   text-decoration: none; color: inherit;
   padding-left: 0.5rem;
 }
+*/
 a.block1 {
+  text-decoration: none; color: inherit;
+  padding-left: 0.5rem;
   border-left: 0.5rem solid transparent;
   transition: border 0.5s;
   &:hover { border-left: 0.5rem solid $link-color; }
 }
 a.block1d {
+  text-decoration: none; color: inherit;
+  padding-left: 0.5rem;
   border-left: 0.5rem dotted transparent;
   transition: border 0.5s;
   &:hover { border-left: 0.5rem dotted $link-color; }
 }
 a.block2 {
+  text-decoration: none; color: inherit;
+  padding-left: 0.5rem;
   transition: border 0.2s;
   &:hover { border-left: 0.5rem solid $link-color; }
 }
 a.block2d {
+  text-decoration: none; color: inherit;
+  padding-left: 0.5rem;
   transition: border 0.2s;
   &:hover { border-left: 0.5rem dotted $link-color; }
 }
