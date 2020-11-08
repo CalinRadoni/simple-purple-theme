@@ -12,4 +12,4 @@ script: script/cibuild.sh
 
 branches:
   only:
-    - master
+    - main
