@@ -163,16 +163,22 @@ code.language-plaintext {
   white-space: nowrap;
 }
 
+a.block {
+  text-decoration: none;
+  color: inherit;
+  &:hover { color: $link-color;}
+}
 a.block1 {
   text-decoration: none;
   color: inherit;
-  border-left: 3px solid transparent;
-  &:hover { border-left: 3px solid $link-color; }
+  border-left: 5px solid transparent;
+  &:hover { border-left: 5px solid $link-color; }
 }
 a.block2 {
   text-decoration: none;
   color: inherit;
-  &:hover { border-left: 3px solid $link-color; }
+  padding-left: 0.5rem;
+  &:hover { border-left: 5px solid $link-color; }
 }
 
 
