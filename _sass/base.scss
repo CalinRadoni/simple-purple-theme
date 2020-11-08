@@ -166,21 +166,32 @@ code.language-plaintext {
 a.block {
   text-decoration: none;
   color: inherit;
+  transition: color 0.5s;
   &:hover { color: $link-color;}
 }
+
+a.block1, a.block1d, a.block2, a.block2d {
+  text-decoration: none; color: inherit;
+  padding-left: 0.5rem;
+}
 a.block1 {
-  text-decoration: none;
-  color: inherit;
-  border-left: 5px solid transparent;
-  &:hover { border-left: 5px solid $link-color; }
+  border-left: 0.5rem solid transparent;
+  transition: border 0.5s;
+  &:hover { border-left: 0.5rem solid $link-color; }
+}
+a.block1d {
+  border-left: 0.5rem dotted transparent;
+  transition: border 0.5s;
+  &:hover { border-left: 0.5rem dotted $link-color; }
 }
 a.block2 {
-  text-decoration: none;
-  color: inherit;
-  padding-left: 0.5rem;
-  &:hover { border-left: 5px solid $link-color; }
+  transition: border 0.2s;
+  &:hover { border-left: 0.5rem solid $link-color; }
 }
-
+a.block2d {
+  transition: border 0.2s;
+  &:hover { border-left: 0.5rem dotted $link-color; }
+}
 
 // layouts
 
