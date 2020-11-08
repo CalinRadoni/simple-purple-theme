@@ -71,7 +71,11 @@ li { margin-bottom: 0 }
 a {
   text-decoration: none;
   color: $link-color;
-  //&:hover { border-bottom: 2px dotted $link-color }
+}
+a.dotted {
+  text-decoration: none;
+  color: $link-color;
+  &:hover { border-bottom: 2px dotted $link-color }
 }
 
 section {
@@ -159,6 +163,19 @@ code.language-plaintext {
   white-space: nowrap;
 }
 
+a.block1 {
+  text-decoration: none;
+  color: inherit;
+  border-left: 3px solid transparent;
+  &:hover { border-left: 3px solid $link-color; }
+}
+a.block2 {
+  text-decoration: none;
+  color: inherit;
+  &:hover { border-left: 3px solid $link-color; }
+}
+
+
 // layouts
 
 @import '_home';
@@ -189,18 +206,17 @@ code.language-plaintext {
 .padding-2h { padding: 0 2rem }
 
 .stretched   { align-self: stretch }
+
 .text-left   { text-align: left   }
 .text-center { text-align: center }
 .text-right  { text-align: right  }
 
-.text-left-right {
-  text-align: left;
-  @include viewport-min-M { text-align: right; }
-}
-.text-center-right {
-  text-align: center;
-  @include viewport-min-M { text-align: right; }
-}
+.text-left-center  { text-align: left;   @include viewport-min-M { text-align: center; } }
+.text-left-right   { text-align: left;   @include viewport-min-M { text-align: right; } }
+.text-center-left  { text-align: center; @include viewport-min-M { text-align: left; } }
+.text-center-right { text-align: center; @include viewport-min-M { text-align: right; } }
+.text-right-center { text-align: right;  @include viewport-min-M { text-align: center; } }
+.text-right-left   { text-align: right;  @include viewport-min-M { text-align: left; } }
 
 .back-grad {
   background-image: linear-gradient($grad-top-color, $grad-bottom-color);
