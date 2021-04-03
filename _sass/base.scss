@@ -197,6 +197,14 @@ a.block2d {
   &:hover { border-left: 0.5rem dotted $link-color; }
 }
 
+td { padding: 0 1rem }
+th {
+  padding: 0 1rem;
+  text-align: center;
+  font-weight: bolder;
+  background-color: $footer-color;
+}
+
 // layouts
 
 @import '_home';
