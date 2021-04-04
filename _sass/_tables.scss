@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+table.hcdl, table.hcdc, table.hcdr {
+  border-collapse: collapse;
+  th, td {
+    border: 1px solid $footer-color;
+  }
+  th {
+    padding: 0 1rem;
+    text-align: center;
+    font-weight: bolder;
+    background-color: $footer-color;
+  }
+  td { padding: 0 1rem }
+}
+
+table.hcdl {
+  td { text-align: left }
+}
+
+table.hcdc {
+  td { text-align: center }
+}
+
+table.hcdr {
+  td { text-align: right }
+}
