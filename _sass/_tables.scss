@@ -2,6 +2,7 @@
 
 table.hcdl, table.hcdc, table.hcdr, table.hcdx {
   border-collapse: collapse;
+  margin-bottom: 1rem;
   th, td {
     border: 1px solid $code-color;
   }
