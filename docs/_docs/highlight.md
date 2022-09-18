@@ -16,3 +16,152 @@ For further modifications keep in mind these links:
 
 - GitHub's [light syntax highlight css](https://github.com/primer/github-syntax-light)
 - some documentation about the tokens from [pygments](https://pygments.org/docs/tokens/)
+
+These are some demo code blocks for:
+
+- [C++](#c)
+- [Shell, bash](#shell-bash)
+- [Powershell](#powershell)
+- [Python](#python)
+
+## C++
+
+```cpp
+class MyBoard : public Board
+{
+public:
+    MyBoard(void);
+    virtual ~MyBoard();
+
+    /**
+     * \brief Init level 2
+     */
+    virtual bool Init_level2(void);
+};
+
+bool MyBoard::Init_level2(void)
+{
+    // a comment
+    bool usePSRAM = psramFound();
+    if (!espCam.Initialize(usePSRAM)) {
+        log_e("Camera initialization failed !");
+        espCam.Deinit(); /* another comment */
+        if (!espCam.Initialize(usePSRAM)) {
+            log_e("Camera reinitialization failed !");
+        }
+    }
+
+    setupTHSensorOK = thSensor.IsPresent();
+    if (setupTHSensorOK) {
+        thSensor.ReadInit();
+    }
+
+    return true;
+}
+```
+
+## Shell, bash
+
+```sh
+#!/bin/bash
+
+# prepare destination directory
+baseDir="$HOME/esp"
+if [ -d "$baseDir" ]; then
+    now=$(/bin/date +%s)
+    newDir="${baseDir}.${now}"
+    mv "$baseDir" "$newDir"
+    echo "$baseDir was saved as $newDir"
+fi
+mkdir "$baseDir" || exit 1
+
+# get the ESP-IDF repository
+cd "$baseDir" || exit 2
+git clone -b v4.1 --recursive https://github.com/espressif/esp-idf.git
+
+# install the tools (compiler, debugger, Python packages, etc.)
+cd "${baseDir}/esp-idf" || exit 3
+./install.sh
+```
+
+## Powershell
+
+```powershell
+<#
+.Synopsis
+    Create a local administrator
+
+.Parameter AdminName
+    Specifies the user name for the new account
+
+.Parameter SecureAdminPass
+    A SecureString object containing the password for the new account
+
+.Example
+    $Password = Read-Host -AsSecureString
+    CreateLocalAdministrator -AdminName "NewAdmin" -SecureAdminPass $Password
+
+.Example
+    $Password = ConvertTo-SecureString -AsPlainText -Force -String "replaceThisWithThePassword"
+    CreateLocalAdministrator -AdminName "NewAdmin" -SecureAdminPass $Password
+#>
+Function CreateLocalAdministrator {
+    Param (
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [String]$AdminName,
+
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [Security.SecureString]$SecureAdminPass
+    )
+
+    try {
+        New-LocalUser -ErrorAction Stop "$AdminName" -Password $SecureAdminPass -FullName "$AdminName" -PasswordNeverExpires
+        Add-LocalGroupMember -ErrorAction Stop -Group "Administrators" -Member "$AdminName"
+    }
+    catch {
+        Write-Error $Error[0]
+        return $false
+    }
+
+    return $true
+}
+```
+
+## Python
+
+```py
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Copyright: (c) 2021, Calin Radoni (https://github.com/CalinRadoni)
+# Based on: https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
+
+from __future__ import (absolute_import, division, print_function)
+__metaclass__ = type
+
+from ansible.module_utils.basic import AnsibleModule
+
+def install_extension(module, name):
+    rc, cmd_out, cmd_err = module.run_command(['code', '--install-extension', name])
+    if rc != 0 :
+        print('Error')
+        module.fail_json(msg = 'Failed to install extension %s: %s %s' % (name, cmd_out, cmd_err))
+
+    return 'successfully installed' in cmd_out
+
+def run_module():
+    module_args = dict(
+        name = dict(type = 'str', required = True)
+    )
+
+    result = dict(
+        changed = False,
+        original_message = '',
+        message = ''
+    )
+
+    module = AnsibleModule(argument_spec = module_args, supports_check_mode = False)
+```

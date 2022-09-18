@@ -44,12 +44,10 @@ supplemental specification the last version from the `master` branch will be use
 
 If you start in an empty directory you need:
 
-1. `_config.yml`, `Gemfile` and `index.html` files. Copy the ones from theme's `demo`
-   directory as a starting point;
+1. `_config.yml`, `Gemfile` and `index.html` files. Copy the ones from theme's `demo` directory as a starting point;
 2. the `pages` directory. Create it and add the files from theme's `docs/pages` in it;
 3. the `_posts` directory. Create it and put your posts in it;
-4. the `assets/img` directory to hold your images. Copy the `logo.svg` from the `demo`
-   directory in it.
+4. the `assets/img` directory to hold your images. Copy the `logo.svg` from the `demo` directory in it.
 
 ```tree
 ├── assets
@@ -107,10 +105,8 @@ If you start in an empty directory you need:
 1. the following theme directories: `_includes`, `_layouts`, `_sass` and `assets`;
 2. the `pages` directory. Create it and add the files from theme's `docs/pages` in it;
 3. the `_posts` directory. Create it and put your posts in it;
-4. the `assets/img` directory to hold your images. Copy the `logo.svg` from the `demo`
-   directory in it;
-5. `_config.yml`, `Gemfile` and `index.html` files. Copy the ones from theme's `demo`
-   directory as a starting point;
+4. the `assets/img` directory to hold your images. Copy the `logo.svg` from the `demo` directory in it;
+5. `_config.yml`, `Gemfile` and `index.html` files. Copy the ones from theme's `demo` directory as a starting point;
 6. comment the `remote_theme:` entry from the `_config.yml` file.
 
 ```tree

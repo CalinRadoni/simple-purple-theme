@@ -26,52 +26,51 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
   </svg>
 </section>
 
-<section class="row-limited padding-1">
-  <div class="card card-margin1">
-    <div class="card-title">
-      <h2>Features</h2>
+<section class="row-vh limited-width">
+  <div class="card-hv card-m1vh">
+    <div class="title">
+      <b>Text</b>
     </div>
-    <div class="card-body">
+    <div class="body">
       <p>Responsive</p>
       <p>Fluid typography</p>
       <p>SEO for Google Search</p>
       <p>Open Graph metadata</p>
     </div>
   </div>
-  <div class="card card-margin1">
-    <div class="card-title">
-      <h2>Skins</h2>
+  <div class="card-hv card-m1vh">
+    <div class="title">
+      <b>image</b>
     </div>
-    <div class="card-body">
+    <div class="body">
       <p class="card-row">
-        <span class="card-box-1" style="background-color: #a300a3">&nbsp;</span>
-        <span class="card-box-1" style="background-color: #800080">&nbsp;</span>
+        <span style="width: 1em; float: left; background-color: #a300a3;">&nbsp;</span>
+        <span style="width: 1em; float: left; margin-right: 8px; background-color: #800080;">&nbsp;</span>
         Purples
       </p>
-      <p class="card-row"><span class="card-box-2" style="background-color: #0f4c81">&nbsp;</span>Classic Blue</p>
-      <p class="card-row"><span class="card-box-2" style="background-color: #FF6F61">&nbsp;</span>Living Coral</p>
-      <p class="card-row"><span class="card-box-2" style="background-color: #88B04B">&nbsp;</span>Greenery</p>
+      <p class="card-row"><span style="width: 2em; float: left; margin-right: 8px; background-color: #0f4c81;">&nbsp;</span>Classic Blue</p>
+      <p class="card-row"><span style="width: 2em; float: left; margin-right: 8px; background-color: #FF6F61;">&nbsp;</span>Living Coral</p>
+      <p class="card-row"><span style="width: 2em; float: left; margin-right: 8px; background-color: #88B04B;">&nbsp;</span>Greenery</p>
     </div>
   </div>
-  <div class="card card-margin1 text-center">
-    <div class="card-title">
-      <h2>Usage</h2>
+  <div class="card-hv card-m1vh text-center">
+    <div class="title">
+      <b>svg file</b>
     </div>
-    <div class="card-body">
+    <div class="body">
       <p>This theme was built for <a href="https://calinradoni.github.io/">calinradoni.github.io</a></p>
-      <p>Will be applied there soon !</p>
     </div>
   </div>
 </section>
 
-<section class="row-full row-always padding-2 text-center back-footer-color">
-  <div class="card card-50 padding-1">
-    <div class="card-body text-right">
+<section class="row padding-2 back-footer-color">
+  <div class="card padding-1">
+    <div class="body stretched text-right">
       <h2>Use the layouts as needed</h2>
     </div>
   </div>
-  <div class="card card-50 padding-1">
-    <div class="card-body text-left">
+  <div class="card padding-1">
+    <div class="body stretched text-left">
       <ul>
       <li>Dedicated layout for pages, single-column</li>
       <li>Dedicated layout for posts, single-column</li>
@@ -81,12 +80,12 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
   </div>
 </section>
 
-<section class="row-limited">
-  <div class="card card-M20 padding-1">
-    <div class="card-title">
+<section class="row-vh limited-width">
+  <div class="card-hv flex-wM20 padding-1">
+    <div class="title">
       <h2>Pages</h2>
     </div>
-    <div class="card-body">
+    <div class="body">
     <nav>
       <ul>
         <li><a href="{{ site.baseurl }}{% link pages/about.md %}">About</a></li>
@@ -96,11 +95,11 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     </nav>
     </div>
   </div>
-  <div class="card card-M40 padding-1">
-    <div class="card-title">
+  <div class="card-hv flex-wM40 padding-1">
+    <div class="title">
       <a href="{{ site.baseurl }}{% link pages/index.html %}"><h2>Posts</h2></a>
     </div>
-    <div class="card-body stretched text-left">
+    <div class="body stretched text-left">
     <p> These are the newest posts:</p>
     <nav>
       <ul>
@@ -117,73 +116,150 @@ image-d: "The text simple purple theme written in purple over a dark gray backgr
     </nav>
     </div>
   </div>
-  <div class="card card-M40 padding-1">
-    <div class="card-title">
+  <div class="card-hv flex-wM40 padding-1">
+    <div class="title">
       <h2>Tag cloud</h2>
     </div>
-    <div class="card-body">
+    <div class="body">
       {% include tag-cloud-number.html %}
     </div>
   </div>
 </section>
 
-<section class="row-full row-always text-center padding-2 back-footer-color">
-  <div class="card card-75 padding-1">
-    <div class="card-body text-right">
-      <p>The <code>card-body</code> is centered in the card and takes as much space as it needs, without overflowing.</p>
+<section class="row limited-width padding-2 back-footer-color">
+  <div class="card flex-w75 padding-1">
+    <div class="body text-right">
+      <p>The <code>body</code> is centered in the card and takes as much space as it needs, without overflowing.</p>
       <p>For card aligned content add the <code>stretched</code> class and one of <code>text-</code> classes.</p>
-      <p>The <code>card-20</code> to <code>card-80</code> are stretched by default.</p>
     </div>
   </div>
-  <div class="card card-25 padding-1">
-    <div class="card-body text-left">
+  <div class="card flex-w25 padding-1">
+    <div class="body text-left">
       <h2>About cards</h2>
     </div>
   </div>
 </section>
 
-<section class="row-limited">
-  <div class="card card-margin1 padding-1 border-footer-color">
-    <div class="card-title card-title-45">Example 1</div>
-    <div class="card-body stretched text-right">
-      <p>border-footer</p>
-      <p>stretched</p>
-      <p>right aligned</p>
+<section class="row-vh limited-width">
+  <div class="card-hv flex-wM25 padding-1 back-color-footer-back">
+    <div class="body text-left-right stretched">
+      <h2>Another card layout</h2>
     </div>
   </div>
-  <div class="card card-margin1 padding-1 border-hover-color">
-    <div class="card-title card-title-30">Example 2</div>
-    <div class="card-body stretched text-left">
-      <p>border-hover</p>
-      <p>stretched</p>
-      <p>left aligned</p>
-    </div>
-  </div>
-  <div class="card card-margin1 padding-1 back-grad">
-    <div class="card-title">Example 3</div>
-    <div class="card-body stretched text-center">
-      <p>back-grad</p>
-      <p>stretched</p>
-      <p>center aligned</p>
+  <div class="card-hv flex-wM75 padding-1">
+    <div class="body text-left stretched">
+      <p><code>card</code> is always in column mode.</p>
+      <p><code>card-vh</code> is in row mode on small screens, and in column mode otherwise.</p>
+      <p><code>text-left-right</code> means left aligned on small screens and right aligned otherwise.</p>
+      <p><code>stretched</code> class is of use here also.</p>
     </div>
   </div>
 </section>
 
-<section class="row-limited row-always">
-  <div class="card card-60 padding-1">
-    <div class="card-body text-right">
-      <p>A card can contain more cards.</p>
-      <p>The cards can have coloured background.</p>
-      <p>The cards can have the size specified in percents. To keep it, these cards are in a `row-always` flex parent.</p>
-      <p>The M<i>percent</i> classes (card-M20, card-M25, ...) will change their width to 100% on small screens.</p>
+<section class="row-vh limited-width back-hover-color text-center">
+  <div class="card-hv flex-wM25 padding-1">
+    <div class="body text-center-right stretched">
+      <h2>and with changed colors</h2>
     </div>
   </div>
-  <div class="card card-20">
-    <div class="card back-red-color">    <div class="card-body"><p>back-red</p></div>    </div>
-    <div class="card back-yellow-color"> <div class="card-body"><p>back-yellow</p></div> </div>
+  <div class="card-hv flex-wM75 padding-1 back-color-back-hover">
+    <div class="body text-left stretched">
+      <p><code>card</code> is always in column mode.</p>
+      <p><code>card-vh</code> is in row mode on small screens, and in column mode otherwise.</p>
+      <p><code>text-left-right</code> means left aligned on small screens and right aligned otherwise.</p>
+      <p><code>stretched</code> class is of use here also.</p>
+    </div>
   </div>
-  <div class="card card-20">
-    <div class="card back-blue-color">   <div class="card-body"><p>back-blue</p></div>   </div>
-    <div class="card back-green-color">  <div class="card-body"><p>back-green</p></div>  </div>
+</section>
+
+<section class="row-vh limited-width">
+  <div class="card-hv card-m1vh padding-1 border-footer-color">
+    <div class="title flex-wM50">Example 1</div>
+    <div class="body stretched text-right">
+      <p>border-footer</p>
+      <p>body stretched text-right</p>
+    </div>
+  </div>
+  <div class="card-hv card-m1vh padding-1 border-hover-color">
+    <div class="title flex-wM30">Example 2</div>
+    <div class="body stretched text-left">
+      <p>border-hover</p>
+      <p>stretched body</p>
+    </div>
+  </div>
+  <div class="card-hv card-m1vh padding-1 back-grad">
+    <div class="title">Example 3</div>
+    <div class="body stretched text-center">
+      <p>back-grad</p>
+      <p>body stretched text-center</p>
+    </div>
+  </div>
+</section>
+
+<section class="row limited-width">
+  <div class="card padding-1">
+    <div class="body text-right">
+      <p>Cards with coloured backgrounds.</p>
+    </div>
+  </div>
+  <div class="card back-red-color">    <div class="body"><p>red</p></div>    </div>
+  <div class="card back-yellow-color"> <div class="body"><p>yellow</p></div> </div>
+  <div class="card back-blue-color">   <div class="body"><p>blue</p></div>   </div>
+  <div class="card back-green-color">  <div class="body"><p>green</p></div>  </div>
+</section>
+
+<section class="row-vh limited-width">
+  <div class="card-hv flex-wM25 padding-1">
+    <div class="body text-left-right stretched">
+      <h2>C++</h2>
+    </div>
+  </div>
+  <div class="card-hv flex-wM75">
+    <div class="body text-left stretched">
+      {% capture my_include %}{% include_relative pages/sh_cpp.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+    </div>
+  </div>
+</section>
+
+<section class="row-vh limited-width">
+  <div class="card-hv flex-wM25 padding-1">
+    <div class="body text-left-right stretched">
+      <h2>Shell</h2>
+    </div>
+  </div>
+  <div class="card-hv flex-wM75">
+    <div class="body text-left stretched">
+      {% capture my_include %}{% include_relative pages/sh_shell.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+    </div>
+  </div>
+</section>
+
+<section class="row-vh limited-width">
+  <div class="card-hv flex-wM25 padding-1">
+    <div class="body text-left-right stretched">
+      <h2>Powershell</h2>
+    </div>
+  </div>
+  <div class="card-hv flex-wM75">
+    <div class="body text-left stretched">
+      {% capture my_include %}{% include_relative pages/sh_ps.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+    </div>
+  </div>
+</section>
+
+<section class="row-vh limited-width">
+  <div class="card-hv flex-wM25 padding-1">
+    <div class="body text-left-right stretched">
+      <h2>Python</h2>
+    </div>
+  </div>
+  <div class="card-hv flex-wM75">
+    <div class="body text-left stretched">
+      {% capture my_include %}{% include_relative pages/sh_py.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+    </div>
   </div>
 </section>

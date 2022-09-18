@@ -15,6 +15,7 @@
   }
 
   .body {
+    max-width: 100%;
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
@@ -47,6 +48,7 @@
   }
 
   .body {
+    max-width: 100%;
     flex: 1 1 auto;
     display: flex; flex-direction: column; align-items: stretch;
     justify-content: center;
@@ -93,11 +95,23 @@
   }
 }
 
-.flex-w20 { flex: 0 0 19.999% } .flex-w25 { flex: 0 0 24.999% } .flex-w33 { flex: 0 0 33.333% }
-.flex-w40 { flex: 0 0 39.999% } .flex-w50 { flex: 0 0 49.999% } .flex-w60 { flex: 0 0 59.999% }
-.flex-w67 { flex: 0 0 66.666% } .flex-w75 { flex: 0 0 74.999% } .flex-w80 { flex: 0 0 79.999% }
+.flex-w20 { flex: 0 0 19.999%; max-width: 19.999% }
+.flex-w25 { flex: 0 0 24.999%; max-width: 24.999% }
+.flex-w33 { flex: 0 0 33.333%; max-width: 33.999% }
+.flex-w40 { flex: 0 0 39.999%; max-width: 39.999% }
+.flex-w50 { flex: 0 0 49.999%; max-width: 49.999% }
+.flex-w60 { flex: 0 0 59.999%; max-width: 59.999% }
+.flex-w67 { flex: 0 0 66.666%; max-width: 66.999% }
+.flex-w75 { flex: 0 0 74.999%; max-width: 74.999% }
+.flex-w80 { flex: 0 0 79.999%; max-width: 79.999% }
 @include viewport-min-M {
-  .flex-wM20 { flex: 0 0 19.999% } .flex-wM25 { flex: 0 0 24.999% } .flex-wM33 { flex: 0 0 33.333% }
-  .flex-wM40 { flex: 0 0 39.999% } .flex-wM50 { flex: 0 0 49.999% } .flex-wM60 { flex: 0 0 59.999% }
-  .flex-wM67 { flex: 0 0 66.666% } .flex-wM75 { flex: 0 0 74.999% } .flex-wM80 { flex: 0 0 79.999% }
+  .flex-wM20 { flex: 0 0 19.999%; max-width: 19.999% }
+  .flex-wM25 { flex: 0 0 24.999%; max-width: 24.999% }
+  .flex-wM33 { flex: 0 0 33.333%; max-width: 33.999% }
+  .flex-wM40 { flex: 0 0 39.999%; max-width: 39.999% }
+  .flex-wM50 { flex: 0 0 49.999%; max-width: 49.999% }
+  .flex-wM60 { flex: 0 0 59.999%; max-width: 59.999% }
+  .flex-wM67 { flex: 0 0 66.666%; max-width: 66.999% }
+  .flex-wM75 { flex: 0 0 74.999%; max-width: 74.999% }
+  .flex-wM80 { flex: 0 0 79.999%; max-width: 79.999% }
 }
