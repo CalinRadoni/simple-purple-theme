@@ -142,7 +142,7 @@ Modify the files as you wish and serve them locally with `bundle exec jekyll ser
 To set up your environment to develop this theme, run:
 
 ```ruby
-bundle config --local set path 'vendor/bundle'
+bundle config set path 'vendor/bundle'
 bundle install
 ```
 

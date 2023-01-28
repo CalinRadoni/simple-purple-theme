@@ -66,7 +66,7 @@ To test it run form the directory with `_config.yml`:
 
 ```sh
 # first time only, you need to run these two commands to install required files
-bundle config --local set path 'vendor/bundle'
+bundle config set path 'vendor/bundle'
 bundle install
 
 # start a web server for your site
@@ -144,7 +144,7 @@ To test it run form the directory with `_config.yml`:
 
 ```sh
 # first time only, you need to run these two commands to install required files
-bundle config --local set path 'vendor/bundle'
+bundle config set path 'vendor/bundle'
 bundle install
 
 # start a web server for your site
