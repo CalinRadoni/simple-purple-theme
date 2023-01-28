@@ -60,8 +60,18 @@ If you start in an empty directory you need:
 └── index.html (from theme's demo directory)
 ```
 
-To test it, run `bundle exec jekyll serve` and open your browser at
-[http://127.0.0.1:4000/demo/](http://127.0.0.1:4000/demo/).
+To test it run form the directory with `_config.yml`:
+
+```ruby
+# first time only, you need to run these two commands to install required files
+bundle config set path 'vendor/bundle'
+bundle install
+
+# start a web server for your site
+bundle exec jekyll serve
+```
+
+then open your browser at [http://127.0.0.1:4000/demo/](http://127.0.0.1:4000/demo/).
 
 ### As a gem - NOT TESTED
 
@@ -122,8 +132,18 @@ If you start in an empty directory you need:
 └── index.html (from theme's demo directory)
 ```
 
-To test it, run `bundle exec jekyll serve` and open your browser at
-[http://localhost:4000/demo/](http://localhost:4000/demo/).
+To test it run form the directory with `_config.yml`:
+
+```ruby
+# first time only, you need to run these two commands to install required files
+bundle config set path 'vendor/bundle'
+bundle install
+
+# start a web server for your site
+bundle exec jekyll serve
+```
+
+then open your browser at [http://127.0.0.1:4000/demo/](http://127.0.0.1:4000/demo/).
 
 ## Docs
 
